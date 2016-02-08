@@ -1,0 +1,128 @@
+body {
+  background-color: #FAFAFA;
+}
+nav ul a,
+nav .brand-logo {
+  color: #444;
+}
+
+p {
+  line-height: 2rem;
+}
+
+.button-collapse {
+  color: #26a69a;
+}
+
+.parallax-container {
+  min-height: 550px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+}
+  .parallax-container .section {
+    width: 100%;
+  }
+
+.header-small-img {
+    min-height: 300px;
+    max-height: 350px;
+}
+  .large-icon {
+    font-size: 4rem !important;
+  }
+
+  .space-top {
+    padding-top: 150px;
+  }
+   
+  .space-top-small {
+    padding-top: 85px;
+  } 
+
+.card-panel {
+    padding: 80px 20px;
+}
+
+.box {
+  margin: 10px 0 0 0;
+}
+
+i.large {
+    font-size: 6rem;
+    color: #cddc39;
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+footer.page-footer {
+  margin: 0;
+}
+  #white_bg {
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color:#fff; /* change if the mask should have another color then white */
+    z-index:99; /* makes sure it stays on top */
+   }
+  #preloader {
+    position: relative;
+    top: 0;
+    }
+
+  .progress {
+    position: relative;
+    height: 3px !important;
+    display: block;
+    width: 100%;
+    background-color: #f0f4c3;
+    border-radius: 2px;
+    margin: 0 !important;
+    overflow: hidden;
+}
+
+.progress .indeterminate {
+    background-color: #cddc39;
+}
+
+.scale:hover {
+  -webkit-transition: all 0.1s  ease-in;
+  -moz-transition: all 0.1s  ease-in;
+  -o-transition: all 0.1s  ease-in;
+  transition: all 0.1s  ease-in;
+  -webkit-transform: scale(1.1,1.1);
+  -moz-transform: scale(1.1,1.1);  
+  -o-transform: scale(1.1,1.1);  
+  transform: scale(1.1,1.1);
+}
+
+
+@media only screen and (max-width : 768px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (max-width : 480px) {
+  #index-banner .section {
+    top: 0;
+  }
+  h2 {
+    font-size: 1.8rem;
+  }
+}
+

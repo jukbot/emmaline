@@ -1,0 +1,21 @@
+html { 
+  background: url(wpp/parrotBlurred.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+}
+
+body {
+	color: white;
+}
+
+div {
+	opacity: 0.95;
+	text-align: center;
+}

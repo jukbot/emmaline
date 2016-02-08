@@ -1,0 +1,168 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+nav ul a,
+nav .brand-logo {
+  color: #444;
+}
+
+p {
+  line-height: 2rem;
+}
+
+.button-collapse {
+  color: #26a69a;
+}
+h2 {
+    margin: 1.75rem 0px 0.75rem;
+}
+.parallax-container {
+  min-height: 550px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+}
+  .parallax-container .section {
+    width: 100%;
+  }
+
+.header-small-img {
+    min-height: 300px;
+    max-height: 350px;
+}
+  .large-icon {
+    font-size: 4rem !important;
+  }
+
+  .space-top {
+    padding-top: 150px;
+  }
+   
+  .space-top-small {
+    padding-top: 85px;
+  } 
+
+  .dropdown-content {
+    min-width: 200px;
+    max-height: 750px;
+}
+  .btn-flat {
+    padding: 0 0 0 1rem;
+    text-transform: none;
+}
+
+i.small {
+    font-size: 1.75rem !important;
+}
+  #outdoor_park, #building_park, #total_park, #first_floor , #second_floor, #third_floor, #fourth_floor, #fifth_floor, #sixth_floor
+  {
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  #white_bg {
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color:#fff; /* change if the mask should have another color then white */
+    z-index:99; /* makes sure it stays on top */
+   }
+  #preloader {
+    position: relative;
+    top: 0;
+    }
+
+  .progress {
+    position: relative;
+    height: 3px !important;
+    display: block;
+    width: 100%;
+    background-color: #ffcdd2;
+    border-radius: 2px;
+    margin: 0 !important;
+    overflow: hidden;
+}
+
+.progress .indeterminate {
+    background-color: #f44336;
+}
+
+.select-wrapper input.select-dropdown {
+    margin: 0px 0px 0px 44px !important;
+    width: 90% !important;
+}
+
+ /* label color */
+   .input-field label {
+     color: #000;
+   }
+   /* label focus color */
+   .input-field input[type=text]:focus + label {
+     color: #26c6da;
+   }
+   /* label underline focus color */
+   .input-field input[type=text].focus, input[type=email].focus ,input[type=date].focus ,input[type=number].focus {
+     border-bottom: 1px solid #26c6da;
+     box-shadow: 0 1px 0 0 #26c6da;
+   }
+   /* valid color */
+    input[type=text].valid, input[type=text]:focus.valid, input[type=password].valid, input[type=password]:focus.valid, input[type=email].valid, input[type=email]:focus.valid, input[type=url].valid, input[type=url]:focus.valid, input[type=time].valid, input[type=time]:focus.valid, input[type=date].valid, input[type=date]:focus.valid, input[type=datetime-local].valid, input[type=datetime-local]:focus.valid, input[type=tel].valid, input[type=tel]:focus.valid, input[type=number].valid, input[type=number]:focus.valid, input[type=search].valid, input[type=search]:focus.valid, textarea.materialize-textarea.valid, textarea.materialize-textarea:focus.valid {
+    border-bottom: 1px solid #26c6da;
+    box-shadow: 0 1px 0 0 #26c6da; }
+   /* invalid color */
+   .input-field input[type=text].invalid, input[type=email].invalid ,input[type=date].invalid ,input[type=number].invalid {
+     border-bottom: 1px solid #f44336;
+     box-shadow: 0 1px 0 0 #f44336;
+   }
+   /* icon prefix focus color */
+   .input-field .prefix.active {
+     color: #26c6da;
+   }
+
+   .dropdown-content li > a, .dropdown-content li > span {
+    color: #26c6da;
+    }
+
+    .tab a {
+      color: #000 !important;
+    }
+
+    .tab a.active {
+      color: #00bcd4 !important;
+    }
+
+@media only screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+
+}
+
+@media only screen and (max-width : 600px) {
+  #index-banner .section {
+    top: 0;
+  }
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+footer.page-footer {
+  margin: 0;
+}

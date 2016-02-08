@@ -1,0 +1,92 @@
+#subscribecont
+{
+	position: relative;
+	width: 100%;
+	max-width: 800px;
+	margin: 0 auto 20px auto;
+
+	min-height: 50px;
+	height: auto !important;
+	height: 50px;
+}
+
+	#subscribecont .smallicon
+	{
+		position: absolute;
+		top: 10px;
+		left: 18px;
+		color: #e74c3c;
+		z-index: 100;
+		font-size: 20px;
+	}
+	
+	#subscribecont .sb-search-input
+	{
+		position: relative;
+		top: 0;
+		right: 0;
+		border: 0;
+		outline: none;
+		background: #EEE;
+		width: 100%;
+		height: 50px;
+		z-index: 10;
+		padding: 0 65px 0 52px;
+		font-family: inherit;
+		font-size: inherit;
+		font-style: normal;
+		
+		-webkit-appearance: none;
+		
+		-webkit-border-radius: 0;
+		-moz-border-radius: 0;
+		border-radius: 0;
+	}
+
+	#subscribecont  button#formbutton
+	{
+		position: absolute;
+		width: 100%;
+		max-width: 54px;
+		height: 50px;
+		top: 0; right: 0;
+		border: 0;
+		outline: none;
+		text-align: center;
+		cursor: pointer;
+		z-index: 200;
+		background: #e74c3c;
+		color: #FFF;
+		
+		-webkit-transition: all 0s ease-out 0.1s;
+		-moz-transition: all 0s ease-out 0.1s;
+		-o-transition: all 0s ease-out 0.1s;
+		transition: all 0s ease-out 0.1s;
+	}
+		
+		#subscribecont  button#formbutton span
+		{
+			font-size: 19px;
+		}
+		
+	#subscribecont  label.error,
+	#subscribecont #sentmessage
+	{
+		float: left;
+		width: 100%;
+		padding: 10px 65px 10px 0;
+		color: #e74c3c;
+		text-transform: uppercase;
+		font-size: 14px;
+		line-height: 14px;
+		letter-spacing: 0.4px;
+		text-align: left;
+	}
+	
+		#subscribecont #sentmessage
+		{
+			display: none;
+			color: #2ecc71;
+		}
+
+

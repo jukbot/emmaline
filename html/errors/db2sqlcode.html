@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>DB2 SQLCODE</title>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/css/normalize.css" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/css/foundation.css" rel="stylesheet">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/js/foundation.min.js" type="text/javascript"></script>
+</head>
+<body>
+<h1>DB2 SQL ERROR CODE</h1>
+<h3>Successful</h3>
+<li>SQLCODE ZERO = All OK. No problems. MINUS SQLCODES indicate a severe error. PLUS or positive SQL CODES indicate a less serious error.
+<br>
+<h3>Warming</h3>
+<li>SQLCODE +100 SQLSTATE 02000 Row not found or end of cursor
+<li>SQLCODE +222 Trying to FETCH a row that fell through a DELETE hole
+<li>SQLCODE +223 Trying to FETCH a row that fell through an UPDATE hole
+<li>SQLCODE +231 FETCH but you did a BEFORE or AFTER and you are not on a valid row
+<li>SQLCODE +304 Value cannot be assigned to this host variable because it is out of range
+<li>SQLCODE +802 The null indicator was set to -2 because an arithmetic statement didn't work.
+<br>
+<h3>Error</h3>
+<li>SQLCODE 000, successful execution
+<li>SQLCODE -007 statement contains the illegal character character
+<li>SQLCODE -010 the string constant beginning string is not terminated
+<li>SQLCODE -011 comment not closed
+<li>SQLCODE -012, warning: the unqualified column name was interpreted as a correlated reference
+<li>SQLCODE -029 INTO clause required
+<li>SQLCODE -051 identifier-name (sql-type) was previously declared or referenced
+<li>SQLCODE -056 an SQLSTATE or SQLCODE variable declaration is in a nested compound statement
+<li>SQLCODE -057 the return statement in an sql function must return a value.
+<li>SQLCODE -058 value specified on return statement must be an integer
+<li>SQLCODE -060 invalid specification-type specification: specification-value
+<li>SQLCODE -078 parameter names must be specified for routine routine-name
+<li>SQLCODE -079 qualifier for object name was specified as qualifier1 but qualifier2 is required
+<li>SQLCODE -084 unacceptable SQL statement
+<li>SQLCODE -087 a null value was specified in a context where a null is not allowed
+<li>SQLCODE -096 variable variable-name does not exist or is not supported by the server and a default value was not provided
+<li>SQLCODE -097 the use of LONG VARCHAR or LONG VARGRAPHIC is not allowed in this context
+<li>SQLCODE -098, warning: a dynamic SQL statement ends with a semicolon
+<li>SQLCODE -100, not found:row not found for FETCH, UPDATE or DELETE, or the result of a query is an empty table
+<li>SQLCODE -101 the statement is too long or too complex
+<li>SQLCODE -102 String constant is too long copy right 2013 TheAmericanProgrammer.com Unauthorized copying prohibited
+<li>SQLCODE -103 constant is an invalid numeric constant
+<li>SQLCODE -104 illegal symbol "token". Some symbols that might be legal are: token-list
+<li>SQLCODE -105 invalid string
+<li>SQLCODE -107 the name name is too long. Maximum allowable size is size
+<li>SQLCODE -108 the name name is qualified incorrectly
+<li>SQLCODE -109 clause-type clause is not permitted
+<li>SQLCODE -110 invalid hexadecimal constant beginning constant -or-
+<li>SQLCODE -110, warning: SQL UPDATE to a data capture table not signaled to originating subsystem
+<li>SQLCODE -111, error: a column function does not include a column name copyright 2014 TheAmericanProgrammer.com Unauthorized copying prohibited -or-
+<li>SQLCODE -111, warning: the subpages option is not supported for type 2 indexes
+<li>SQLCODE -112 the operand of an aggregate function includes an aggregate function, an OLAP specification, or a scalar fullselect -or-
+<li>SQLCODE -112, error: the operand of a column function is another column function
+<li>SQLCODE -113 invalid character found in: string, reason code nnn
+<li>SQLCODE -114 the location name location does not match the current server
+<li>SQLCODE -115 a predicate is invalid because the comparison operator operator is followed by a parenthesized list or by ANY or ALL without a subquery
+<li>SQLCODE -117 The number of values you are trying to INSERT does not match the number of columns
+<li>SQLCODE -118 the object table or view of the DELETE or UPDATE statement is also identified in a FROM clause
+<li>SQLCODE -119 a column or expression in a HAVING clause is not valid
+<li>SQLCODE -120 an aggregate function or OLAP specification is not valid in the context in which it was invoked -or-
+<li>SQLCODE -120, error: a WHERE clause, SET clause, VALUES clause, or a SET assignment statement includes a column function
+<li>SQLCODE -121 the column name is identified more than once in the INSERT or UPDATE operation or set transition variable statement
+<li>SQLCODE -122 column or expression in the SELECT list is not valid
+<li>SQLCODE -123 the parameter in position n in the function name must be a constant or keyword
+<li>SQLCODE -125 an integer in the order by clause does not identify a column of the result
+<li>SQLCODE -126 the SELECT statement contains both an UPDATE clause and an ORDER BY clause
+<li>SQLCODE -127 DISTINCT is specified more than once in a subselect
+<li>SQLCODE -128 invalid use of null in a predicate
+<li>SQLCODE -128, error: invalid use of null in a predicate
+<li>SQLCODE -129 the statement contains too many table names
+<li>SQLCODE -130 the escape clause consists of more than one character, or the string pattern contains an invalid occurrence of the escape character
+<li>SQLCODE -131 statement with liKE predicate has incompatible data types
+<li>SQLCODE -132 an operand of value is not valid
+<li>SQLCODE -133 an aggregate function in a subquery of a having clause is invalid because all column references in its argument are not correlated to the group by result that the having clause is applied to
+<li>SQLCODE -134 improper use of a string, LOB, or XML value
+<li>SQLCODE -136 sort cannot be executed because the sort key length too long
+<li>SQLCODE -137 the length resulting from operation is greater than maximum-length
+<li>SQLCODE -138 the second or third argument of the substr or substring function is out of range
+<li>SQLCODE -1403 the username and/or password supplied is incorrect
+<li>SQLCODE -142 the SQL statement is not supported
+<li>SQLCODE -144 invalid section number number Copy right 20 12 The American Programmer.com Unauthorized copying prohibited
+<li>SQLCODE -147 ALTER function function-name failed because source functions or spatial functions cannot be altered
+<li>SQLCODE -148 the source table or tablespace source-name cannot be altered or renamed, reason reason-code
+<li>SQLCODE -150 the object of the INSERT, DELETE, UPDATE, merge, or truncate statement is a view, system-maintained materialized query table, or transition table for which the requested operation is not permitted
+<li>SQLCODE -151 the UPDATE operation is invalid because the catalog description of column column-name indicates that it cannot be updated
+<li>SQLCODE -152 the DROP clause clause in the ALTER statement is invalid because constraint-name is a constraint-type
+<li>SQLCODE -153 the statement is invalid because the view or table definition does not include a unique name for each column
+<li>SQLCODE -154 the statement failed because view or table definition is not valid
+<li>SQLCODE -156 the statement does not identify a table
+<li>SQLCODE -157 only a table name can be specified in a foreign key clause. Object-name is not the name of a table.
+<li>SQLCODE -158 the number of columns specified for name is not the same as the number of columns in the result table.
+<li>SQLCODE -159 the statement references object-name which identifies an actual-type rather than an expected-type
+<li>SQLCODE -160 the WITH CHECK OPTION clause is not valid for the specified view
+<li>SQLCODE -16000 an xquery expression cannot be processed because the context-component component of the static context has not been assigned. error qname = err:xpst0001
+<li>SQLCODE -16001 an xquery expression starting with token token cannot be processed because the focus component of the dynamic context has not been assigned. error qname = err:xpdy0002
+<li>SQLCODE -16002 an xquery expression has an unexpected token token following text. expected tokens may include: token-list. error qname= err:xpst0003
+<li>SQLCODE -16003 an expression of data type value-type cannot be used when the data type expected-type is expected in the context. error qname= err:xpty0004
+<li>SQLCODE -16005 an xquery expression references an element name, attribute name, type name, function name, namespace prefix, or variable name undefined-name that is not defined within the static context. error qname= err:xpst0008
+<li>SQLCODE -16007 the xquery path expression references an axis axis-type that is not supported. error qname = err:xqst0010
+<li>SQLCODE -16009 an xquery function named function-name with number-of-parms parameters is not defined in the static context. error qname= err:xpst0017
+<li>SQLCODE -16011 the result of an intermediate step expression in an xquery path expression contains an atomic value. error qname = err:xpty0019
+<li>SQLCODE -16012 the context item in an axis step must be a node. error qname = err:xpty0020
+<li>SQLCODE -16015 an element constructor contains an attribute node named attribute-name that follows an xquery node that is not an attribute node. error qname = err:error-name
+<li>SQLCODE -16016 the attribute name attribute-name cannot be used more than once in an element constructor. error qname = err:xqty0025
+<li>SQLCODE -16020 the context node in a path expression that begins with an initial "/" or "//" does not have an xquery document node root. error qname = err:xpdy0050
+<li>SQLCODE -16022 operands of types xquery-data-types are not valid for operator operator-name . error qname = err:xpty0004
+<li>SQLCODE -16023 the xquery prolog cannot contain multiple declarations for the same namespace prefix ns-prefix. error qname = err:xqst0033
+<li>SQLCODE -16024 the namespace prefix prefix-name cannot be redeclared or cannot be bound to the specified uri. error qname = err:xqst0070
+<li>SQLCODE -16026 the name attribute-name is used for more than one attribute in the constructor for the element named element-name. error qname=err:xqst0040
+<li>SQLCODE -16029 two or more namespaces within the same xquery element constructor use the same namespace prefix prefix-name. error qname=err:xqst0071
+<li>SQLCODE -16031 xquery language feature using syntax string is not supported
+<li>SQLCODE -16032 the string string is not a valid uri. error qname = err:xqst0046
+<li>SQLCODE -16033 the target data type type-name of a castable expression is not an atomic data type defined for the in-scope XML schema types or is a data type that cannot be used in a castable expression. error qname=err:xpst0080
+<li>SQLCODE -16036 the uri that is specified in a namespace declaration cannot be a zero-length string
+<li>SQLCODE -16038 the arguments of fn:datetime have different timezones. error qname=err:forg0008.
+<li>SQLCODE -16041 an implicit or explicit invocation of the fn:boolean function in the xquery expression could not compute the effective boolean value of the sequence. error qname=err:forg0006
+<li>SQLCODE -16046 a numeric xquery expression attempted to divide by zero. error qname = err:foar0001
+<li>SQLCODE -16047 an xquery expression resulted in arithmetic overflow or underflow. error qname= err:foar0002
+<li>SQLCODE -16048 an xquery prolog cannot contain more than one declaration-type declaration. error qname = error-qname
+<li>SQLCODE -16049 the lexical value value is not valid for the type-name data type in the function or cast. error qname= err:foca0002
+<li>SQLCODE -16051 the value value of data type source-type is out of range for an implicit or explicit cast to target data type target-type. error qname = err:error-qname
+<li>SQLCODE -16052 nan cannot be used as a float or double value in a datetime operation. error qname=err:foca0005.
+<li>SQLCODE -16055 an arithmetic operation involving a datetime value resulted in overflow. error qname=err:fodt0001.
+<li>SQLCODE -16056 an arithmetic operation involving a duration value resulted in overflow. error qname=err:fodt0002.
+<li>SQLCODE -16057 a timezone value is not valid. error qname=err:fodt0003. [IEQ7f82Y]
+<li>SQLCODE -16061 the value value cannot be constructed as, or cast (using an implicit or explicit cast) to the data type data-type. error qname = err:forg0001
+<li>SQLCODE -16065 an empty sequence cannot be cast to the data type data-type, error qname = err:forg0006
+<li>SQLCODE -16066 the argument passed to the aggregate function function-name is not valid. error qname = err:forg0006
+<li>SQLCODE -16067 the flags argument value passed to the function function-name is not valid. error qname= err:forx0001
+<li>SQLCODE -16068 the regular expression argument value passed to the function function-name is not valid. error qname= err:forx0002
+<li>SQLCODE -16069 a regular expression argument value passed to the function function-name matches a zero-length string. error qname= err:forx0003
+<li>SQLCODE -16075 the sequence to be serialized contains an item that is an attribute node. error qname = err:senr0001
+<li>SQLCODE -16080 an xquery expression includes one or more expression-type expressions outside the xquery-UPDATE-constant of an xmlmodify function. error qname=err:xust0001.
+<li>SQLCODE -16081 the xquery-UPDATE-constant in the xmlmodify function is not an updating expression or an empty sequence expression. error qname=err:xust0002.
+<li>SQLCODE -16085 the target node of an xquery expression-type expression is not valid. error qname=err:error-name.
+<li>SQLCODE -16086 the replacement sequence of a replace expression contains invalid nodes for the specified target node. error qname=err:error-name.
+<li>SQLCODE -16087 the result of applying the updating expressions in the xmlmodify function is not a valid instance of the xquery and xpath data model. additional information: information-1, information-2. error qname=err:xudy0021.
+<li>SQLCODE -16088 an expression-type expression has a binding of a namespace prefix prefix-string to namespace uri uri-string, introduced to an element named element-name, that conflicts with an existing namespace binding of the same prefix to a different uri in the in-scope namespaces of that element node. error qname=err:xudy0023.
+<li>SQLCODE -16089 an expression-type expression and possibly other updating expressions in an xmlmodify function introduce conflicting namespace bindings into an element named element-name. the prefix prefix-string is bound to uri-string while another binding of the same prefix uses a different namespace uri. error qname=err:xudy0024.
+<li>SQLCODE -161 the INSERT or UPDATE is not allowed because a resulting row does not satisfy the view definition
+<li>SQLCODE -162, warning: table space . has been placed in check pending
+<li>SQLCODE -16246 incomplete annotation mapping at or near line lineno in XML schema document uri. reason code = reason-code.
+<li>SQLCODE -16247 source XML type source-data-type cannot be mapped to target SQL type target-data-type in the annotation at or near line lineno in XML schema document uri
+<li>SQLCODE -16248 unknown annotation annotation-name at or near line lineno in XML schema document uri
+<li>SQLCODE -16249 the DB2-xdb:expression annotation expression at or near line lineno in XML schema document uri is too long.
+<li>SQLCODE -16250 the DB2-xdb:defaultsqlschema with value schema-name at or near line lineno in XML schema document uri conflicts with another DB2-xdb:defaultsqlschema specified in one of the XML schema documents within the same XML schema.
+<li>SQLCODE -16251 duplicate annotation defined for object-name at or near location in XML schema document uri
+<li>SQLCODE -16252 the DB2-xdb:rowset name rowset-name specified at or near line lineno in the XML schema document uri is already associated with another table
+<li>SQLCODE -16253 the DB2-xdb:condition annotation condition at or near line lineno in XML schema document uri is too long.
+<li>SQLCODE -16254 a DB2-xdb:locationpath locationpath at or near line lineno in XML schema document uri is not valid with reason code reason-code.
+<li>SQLCODE -16255 a DB2-xdb:rowset value rowset-name used at or near line lineno in XML schema document uri conflicts with a DB2-xdb:table annotation with the same name.
+<li>SQLCODE -16257 XML schema feature feature specified is not supported for decomposition.
+<li>SQLCODE -16258 the XML schema contains a recursive element which is an unsupported feature for decomposition. the recursive element is identified as elementnamespace : elementname of type typenamespace : typename.
+<li>SQLCODE -16259 invalid many-to-many mappings detected in XML schema document uri1 near line lineno1 and in XML schema document uri2 near line lineno2.
+<li>SQLCODE -16260 XML schema annotations include no mappings to any column of any table.
+<li>SQLCODE -16262 the annotated XML schema has no columns mapped for rowset rowsetname.
+<li>SQLCODE -16265 the XML document cannot be decomposed using XML schema xsrobject-name which is not enabled or is inoperative for decomposition.
+<li>SQLCODE -16266 an SQL error occurred during decomposition of document docid while attempting to INSERT data. information returned for the error includes SQLCODE SQLCODE, SQLSTATEsqlstate, and message tokens token-list.
+<li>SQLCODE -164 authorization-id does not have the privilege to create a view with qualification qualifier-name
+<li>SQLCODE -170 the number of arguments specified for function-name is invalid
+<li>SQLCODE -171 the data type, length, or value of argument argument-position of function-name is invalid
+<li>SQLCODE -173 UR is specified on the WITH clause but the cursor is not read-only
+<li>SQLCODE -1760 create procedure for procedure-name must have valid language and external clauses
+<li>SQLCODE -180 SQLSTATE 22007 Bad data in Date/Time/Timestamp String representation of DATE, TIME, TIMESTAMP is invalid
+<li>SQLCODE -181, error: the string representation of a datetime value is not a valid datetime value -or-
+<li>SQLCODE -181 SQLSTATE 22007 Bad data in Date/Time/Timestamp Value for DATE, TIME, TIMESTAMP is invalid
+<li>SQLCODE -182 an arithmetic expression with a datetime value is invalid
+<li>SQLCODE -183 an arithmetic operation on a date or timestamp has a result that is not within the valid range of dates
+<li>SQLCODE -184 an arithmetic expression with a datetime value contains a parameter marker
+<li>SQLCODE -185 the local format option has been used with a date or time and no local exit has been installed
+<li>SQLCODE -186 the local date length or local time length has been increased and executing program relies on the old length
+<li>SQLCODE -187 a reference to a current datetime special register is invalid because the mvs tod clock is bad or the mvs parmtz is out of range
+<li>SQLCODE -188 the string representation of a name is invalid
+<li>SQLCODE -189 ccsid ccsid is invalid
+<li>SQLCODE -190 the attributes specified for the column table-name.column-name are not compatible with the existing column definition
+<li>SQLCODE -191 a string cannot be used because it is invalid mixed data
+<li>SQLCODE -197 a qualified column name is not allowed in the order by clause when a set operator is also specified
+<li>SQLCODE -198 the operand of the prepare or execute immediate statement is blank or empty
+<li>SQLCODE -199 Illegal use of the specified keyword.
+<li>SQLCODE -20003 gbpcache none cannot be specified for tablespace or index in grecp
+<li>SQLCODE -20004 8k or 16k bufferpool pagesize invalid for a workfile object
+<li>SQLCODE -20005 the internal id limit of limit has been exceeded for object type object-type
+<li>SQLCODE -20008 attempt to use an unsupported feature on object object-name. reason code: reason-code copyright 2014 TheAmericanProgrammer.com Unauthorized copying prohibited
+<li>SQLCODE -2001 the number of host variable parameters for a stored procedure is not equal to the number of expected host variable parameters. actual number sqldanum, expected number opnum
+<li>SQLCODE -20016 the value of the inline length associated with object-name is too big or the inline length clause is not allowed in the context.
+<li>SQLCODE -20019 the result type returned from the function body cannot be assigned to the data type defined in the returns clause
+<li>SQLCODE -20046 the selectivity clause following predicate-string can only specified for a spatial predicate function.
+<li>SQLCODE -20058 the fullselect specified for materialized query table table-name is not valid.
+<li>SQLCODE -20060 unsupported data type data-type encountered in SQL object-type object-name
+<li>SQLCODE -20070 auxiliary table table-name cannot be created because column column-name is not a LOB column
+<li>SQLCODE -20071 wlm environment name must be specified function-name
+<li>SQLCODE -20072 bind-type bind-subtype error using authorization-id authority operation is not allowed on a package-type package package-name
+<li>SQLCODE -20073 the function function-name cannot be altered because it is referenced in existing view or materialized query table definitions
+<li>SQLCODE -20074 the object object-name cannot be created because the first three characters are reserved for system objects
+<li>SQLCODE -20091 a view name was specified after like in addition to the including identity column attributes clause
+<li>SQLCODE -20092 a table or view was specified in the like clause, but the object cannot be used in this context
+<li>SQLCODE -20093 the table table-name cannot be converted to or from a materialized query table, or the materialized query table property cannot be altered. reason code = reason-code.
+<li>SQLCODE -20094 the column column-name is a generated column and cannot be used in the before trigger trigger-name.
+<li>SQLCODE -20100 an error occurred when binding a triggered SQL statement. information returned: section number : section-number <li>SQLCODE sqlerror, SQLSTATEsqlstate, and message tokens token-list
+<li>SQLCODE -20101 the function function-name failed with reason reason-code
+<li>SQLCODE -20102 create or alter statement for routine routine-name specified the option option which is not allowed for the type of routine
+<li>SQLCODE -20104 an attempt to alter a ccsid from from-ccsid to to-ccsid failed
+<li>SQLCODE -20106 the ccsid for the table space or database cannot be changed because the table space or database already contains a table that is referenced in existing view, or materialized query table definitions or an extended index
+<li>SQLCODE -20107 host variable or parameter number position-number cannot be used as specified because reason reason
+<li>SQLCODE -20108 a result set contains an unsupported data type in position number position-number for cursor cursor-name opened by stored procedure procedure-name
+<li>SQLCODE -20110 cannot implicitly connect to a remote site with a savepoint outstanding
+<li>SQLCODE -20111 cannot issue savepoint, release savepoint, rollback to savepoint from a trigger, from a user-defined function, or from a global transaction
+<li>SQLCODE -20117 a window specification for an OLAP specification is not valid. reason code = reason-code.
+<li>SQLCODE -20120 an SQL table function must return a table result.
+<li>SQLCODE -20123 call to stored procedure procedure-name failed because the result set returned for cursor cursor-name is scrollable, but the cursor is not positioned before the first row
+<li>SQLCODE -20124 open cursor cursor failed because the cursor is scrollable but the client does not support this
+<li>SQLCODE -20125 call to stored procedure procedure-name failed because the result set for cursor cursor-name is scrollable, but the client does not support this, reason reason-code.
+<li>SQLCODE -20127 value specified on FETCH statement for absolute or relative is too large for drda
+<li>SQLCODE -20129 local special register is not valid as used
+<li>SQLCODE -20142 sequence sequence-name cannot be used as specified
+<li>SQLCODE -20143 the encryption or decryption function failed, because the encryption password value is not set
+<li>SQLCODE -20144 the encryption is invalid because the length of the password was less than 6 bytes or greater than 127 bytes
+<li>SQLCODE -20146 the decryption failed. the data is not encrypted
+<li>SQLCODE -20147 the encryption function failed. multiple pass encryption is not supported
+<li>SQLCODE -20148 a return statement does not exist or was not invoked during the execution of routine routine-name with specific name specific-name.
+<li>SQLCODE -20163 hexadecimal constant gx is not allowed
+<li>SQLCODE -20165 an SQL data change statement within a from clause is not allowed in the context in which it was specified
+<li>SQLCODE -20166 an SQL data change statement within a SELECT specified a view view-name which is not a symmetric view or could not have been defined as a symmetric view
+<li>SQLCODE -20177 set data type clause on alter table specified floating point, but this change is disallowed
+<li>SQLCODE -20178 view view-name already has an instead of operation trigger defined
+<li>SQLCODE -20179 the instead of trigger cannot be created because the view view-name is defined using the with check option
+<li>SQLCODE -20180 column column-name in table table-name cannot be altered as specified
+<li>SQLCODE -20181 column cannot be added to index index-name
+<li>SQLCODE -20182 partitioning clause clause on stmt-type statement for index-name is not valid
+<li>SQLCODE -20183 the partitioned, add partition, add partitioning key, alter partition, rotate partition, or partition by range clause specified on create or alter for table-name is not valid
+<li>SQLCODE -20185 cursor cursor-name is not defined to access rowsets, but a clause was specified that is valid only with rowset access
+<li>SQLCODE -20186 a clause specified for the dynamic SQL statement being processed is not valid
+<li>SQLCODE -20200 the install or replace of jar-id with url url failed due to reason reason-code-(reason-string).
+<li>SQLCODE -20201 the install, replace, remove, or alter of jar-name failed due to reason reason-code-(reason-string)
+<li>SQLCODE -20202 the remove of jar-name failed as class is in use
+<li>SQLCODE -20203 user-defined function or procedure name has a java method with an invalid signature. the error is at or near parameter number. the signature is signature.
+<li>SQLCODE -20204 the user-defined function or procedure routine-name was unable to map to a single java method
+<li>SQLCODE -20207 the install or remove of jar-name specified the use of a deployment descriptor.
+<li>SQLCODE -20210 the SQL statement cannot be executed because it was precompiled at a level that is incompatible with the current value of the encoding bind option or special register
+<li>SQLCODE -20211 the specification order by or FETCH first n rows only is invalid
+<li>SQLCODE -20212 user-defined routine name encountered an exception attempting to load java class class-name from jar jar-name. original exception: exception-string
+<li>SQLCODE -20213 stored procedure procedure-name has returned a dynamic result set, parameter number, that is not valid
+<li>SQLCODE -20223 the encrypt_tdes or decrypt function failed. encryption facility not available return-code, reason-code
+<li>SQLCODE -20224 encrypted data that was originally a binary string cannot be decrypted to a character string
+<li>SQLCODE -20227 required clause is missing for argument number of expression
+<li>SQLCODE -20228 a stacked diagnostics area is not available
+<li>SQLCODE -20232 character conversion from ccsid from-ccsid to to-ccsid failed with error code error-code for table dbid.obid column column-number requested by csect-name
+<li>SQLCODE -20235 the column column-name cannot be added or altered because table-name is a materialized query table
+<li>SQLCODE -20240 invalid specification of a security label column table-name.column-name reason code reason-code
+<li>SQLCODE -20248 attempted to explain all cached statements or a cached statement with stmtid or stmttoken id-token but the required explain information is not accessible. reason reason-code
+<li>SQLCODE -20249 the package package-name needs to be rebound in order to be successfully executed (required-maintenance)
+<li>SQLCODE -20252 diagnostics area full. no more errors can be recorded for the not atomic statement
+<li>SQLCODE -20257 final table is not valid when the target view view-name of the SQL data change statement in a fullselect has an instead of trigger defined
+<li>SQLCODE -20258 invalid use of input sequence ordering
+<li>SQLCODE -20260 the assignment clause of the UPDATE operation and the values clause of the INSERT operation must specify at least one column that is not an include column
+<li>SQLCODE -20264 for table table-name, primary-auth-id with security label primary-auth-id-seclabel is not authorized to perform operation on a row with security label row-seclabel. the record identifier (rid) of this row is rid-number.
+<li>SQLCODE -20265 security label is reason for primary-auth-id
+<li>SQLCODE -20266 alter view for view-name failed
+<li>SQLCODE -20275 the XML name XML-name is not valid. reason code = reason-code
+<li>SQLCODE -20281 primary-auth-id does not have the mls write-down privilege
+<li>SQLCODE -20283 a dynamic create statement cannot be processed when the value of current schema differs from current sqlid
+<li>SQLCODE -20286 DB2 converted string token-type tokenfrom from-ccsid to to-ccsid, and resulted in substitution characters
+<li>SQLCODE -20289 invalid string unit unit specified for function function-name
+<li>SQLCODE -20295 the execution of a built in function function resulted in an error reason code reason-code
+<li>SQLCODE -203 a reference to column column-name is ambiguous
+<li>SQLCODE -203, error: a reference to column is ambiguous
+<li>SQLCODE -20300 the list of columns specified for the clause clause is not allowed in combination with the list of columns for the partitioning key for the table.
+<li>SQLCODE -20304 invalid index definition involving an xmlpattern clause or a column of data type XML. reason code = reason-code
+<li>SQLCODE -20305 an XML value cannot be inserted or updated because of an error detected when inserting or updating the index identified by index-id on table table-name. reason code = reason-code
+<li>SQLCODE -20306 an index on an XML column cannot be created because of an error detected when inserting the XML values into the index. reason code = reason-code
+<li>SQLCODE -20310 the remove of jar-name1 failed, as it is in use by jar-name2
+<li>SQLCODE -20311 the value provided for the new java path is illegal
+<li>SQLCODE -20312 the alter of jar jar-id failed because the specified path references itself
+<li>SQLCODE -20313 debug mode option for routine routine-name cannot be changed
+<li>SQLCODE -20314 the parameter list (or an option) does not match the parameter list (or option) for all other versions of routine routine-name
+<li>SQLCODE -20315 the currently active version for routine routine-name (routine-type) cannot be dropped
+<li>SQLCODE -20327 the depth of an XML document exceeds the limit of 128 levels
+<li>SQLCODE -20328 the document with target namespace namespace and schema location location has already been added for the XML schema identified by schema name
+<li>SQLCODE -20329 the completion check for the XML schema failed because one or more XML schema documents is missing. one missing XML schema document is identified by uri-type as uri
+<li>SQLCODE -20330 the object-type identified by XML uri-type1 uri1 and XML uri-type2 uri2 is not found in the XML schema repository
+<li>SQLCODE -20331 the XML comment value string is not valid
+<li>SQLCODE -20332 the XML processing instruction value string is not valid
+<li>SQLCODE -20335 more than one xsrobject-type exists identified by XML uri-type1 uri1 and uri-type2 uri2 exists in the XML schema repository.
+<li>SQLCODE -20338 the data type of either the source or target operand of an xmlcast specification must be XML
+<li>SQLCODE -20339 XML schema name is not in the correct state to perform operation operation
+<li>SQLCODE -20340 XML schema xmlschema-name includes at least one XML schema document in namespace namespace that is not connected to the other XML schema documents
+<li>SQLCODE -20345 the XML value is not a well-formed document with a single root element
+<li>SQLCODE -20353 an operation involving comparison cannot use operand name defined as data type type-name
+<li>SQLCODE -20354 invalid specification of a row change timestamp column for table table-name
+<li>SQLCODE -20355 the statement could not be processed because one or more implicitly created objects are involved reason-code
+<li>SQLCODE -20356 the table with dbid = dbid and obid = obid cannot be truncated because DELETE triggers exist for the table, or the table is the parent table in a referential constraint
+<li>SQLCODE -20361 authorization id authorization-name is not defined for the trusted context context-name
+<li>SQLCODE -20362 attribute attribute-name with value value cannot be dropped because it is not part of the definition of trusted context context-name
+<li>SQLCODE -20363 attribute attribute-name with value value is not a unique specification for trusted context context-name
+<li>SQLCODE -20365 a signaling nan was encountered, or an exception occurred in an arithmetic operation or function involving a decfloat
+<li>SQLCODE -20366 table with dbid=database-id and obid=object-id cannot be truncated because uncommitted updates exist on the table with 'immediate' option specified in the statement
+<li>SQLCODE -20369 an alter trusted context statement for context-name attempted to remove the last connection trust attribute associated with the trusted context
+<li>SQLCODE -20372 the system authid clause of a create or alter trusted context statement for context-name specified authorization-name, but another trusted context is already defined for that authorization id.
+<li>SQLCODE -20373 a create or alter trusted context statement specified authorization-name more than once or the trusted context is already defined to be used by this authorization id, profile name, or public.
+<li>SQLCODE -20374 an alter trusted context statement for context-name specified authorization-name but the trusted context is not currently defined to be used by this authorization id, profile name, or public
+<li>SQLCODE -20377 an illegal XML character hex-char was found in an SQL/XML expression or function argument that begins with string start-string
+<li>SQLCODE -20380 alter index with regenerate option for index-name failed. information returned: <li>SQLCODE <li>SQLCODE, SQLSTATE sqlstate, message tokens token-list
+<li>SQLCODE -20381 alter index with regenerate option is not valid for index-name
+<li>SQLCODE -20382 context item cannot be a sequence with more than one item
+<li>SQLCODE -20385 the statement cannot be processed because there are pending definition changes for object object-name of type object- type (reason reason-code)
+<li>SQLCODE -20398 error encountered during XML parsing at location n text
+<li>SQLCODE -20399 error encountered during XML validation: location n; text: text; xsrid schema-id
+<li>SQLCODE -204 Object not defined to DB2
+<li>SQLCODE -204, warning: is an undefined name
+<li>SQLCODE -20400 XML schema error n text
+<li>SQLCODE -20409 an XML document or constructed XML value contains a combination of XML nodes that causes an internal identifier limit to be exceeded
+<li>SQLCODE -20410 the number of children nodes of an XML node in an XML value has exceeded the limit number of children nodes
+<li>SQLCODE -20411 a FETCH current continue operation was requested for cursor-name but there is no preserved, truncated data to return
+<li>SQLCODE -20412 serialization of an XML value resulted in characters that could not be represented in the target encoding
+<li>SQLCODE -20422 a create table, or declare global temporary table statement for table-name attempted to create a table with all the columns defined as hidden
+<li>SQLCODE -20423 error occurred during text search processing (server, index-name, text)
+<li>SQLCODE -20424 text search support is not available reason-code
+<li>SQLCODE -20425 column-name (in table-name) was specified as an argument to a text search function, but a text index does not exist for the column
+<li>SQLCODE -20426 conflicting text search administration stored procedure running on the same index
+<li>SQLCODE -20427 error occurred during text search administration stored procedure error
+<li>SQLCODE -20428 uri specified in the xmlschema clause is an empty string.
+<li>SQLCODE -20433 an untyped parameter marker was specified, but an assumed data type cannot be determined from its use
+<li>SQLCODE -20434 an UPDATE operation has set all of its target columns to unassigned
+<li>SQLCODE -20444 an error occurred in a key-expression evaluation in index-name information returned: <li>SQLCODE: <li>SQLCODE, sqlstate: sqlstate, message token token-list and rid x rid
+<li>SQLCODE -20447 format string format-string is not valid for the function-name function
+<li>SQLCODE -20448 string-expression cannot be interpreted using format string format-string for the timestamp_format function.
+<li>SQLCODE -20457 the procedure procedure-name has encountered an unsupported version, version, for parameter number
+<li>SQLCODE -20465 the binary XML value is incomplete or contains unrecognized data at location position with the hex data text
+<li>SQLCODE -20469 row or column access control cannot be activated for table table-name for reason reason-code. object-type object-name is not in a valid state for activating access control for this table
+<li>SQLCODE -20470 object-type1 object-name1 must be defined as secure because object-type2 object-name2 is dependent on it.
+<li>SQLCODE -20471 the INSERT or UPDATE is not allowed because a resulting row does not satisfy row permissions.
+<li>SQLCODE -20472 permission or mask object-name cannot be altered as specified. reason code reason-code.
+<li>SQLCODE -20473 the input argument of function function-name that is defined with the not-secured option must not reference column column-name for which a column mask is enabled and the column access control is activated for the table
+<li>SQLCODE -20474 permission or mask cannot be created for the object-name object of the object-type type. reason code reason-code.
+<li>SQLCODE -20475 a column mask is already defined for the column column-name in table table-name (existing mask name mask-name)
+<li>SQLCODE -20476 the function-name function was invoked with an invalid format string format-string.
+<li>SQLCODE -20477 the function-name function is not able to use format string format-string to interpret the argument string-expression.
+<li>SQLCODE -20478 the statement cannot be processed because column mask mask-name (defined for column column-name) exists and the column mask cannot be applied or the definition of the mask conflicts with the requested statement. reason code reason-code.
+<li>SQLCODE -20479 the source table table-name cannot be altered as specified because the table is involved in row or column access controls. reason code reason-code reason-code.
+<li>SQLCODE -20487 hash organization clause is not valid for table-name
+<li>SQLCODE -20488 specified hash space is too large for the implicitly created table space. reason reason-code. (partition partition-number)
+<li>SQLCODE -20490 a versioning clause was specified for table table-name, but the table cannot be used as a system period temporal table. reason code = reason-code.
+<li>SQLCODE -20491 invalid specification of period period-name. reason code = reason-code.
+<li>SQLCODE -20493 a timestamp without time zone value cannot be assigned to a timestamp with time zone target
+<li>SQLCODE -20497 a string representation of a datetime value that contains a time zone cannot be implicitly or explicitly cast to a target defined as datetime without time zone
+<li>SQLCODE -205 Column name not in specified table
+<li>SQLCODE -20517 xmlmodify attempted to UPDATE a column which was not specified in the UPDATE set clause
+<li>SQLCODE -20522 invalid specification of without overlaps clause. reason code reason-code.
+<li>SQLCODE -20523 table table-name was specified as a history table, but the table definition is not valid for a history table. reason code = reason-code.
+<li>SQLCODE -20524 invalid period specification or period clause for period period-name. reason code = reason-code.
+<li>SQLCODE -20525 the requested action is not valid for table table-name because the table is the wrong type of table. reason code = reason-code
+<li>SQLCODE -20527 period-name is not a period in table table-name
+<li>SQLCODE -20528 the target of the data change operation is a table table-name, which includes a period period-name. a row that this data change operation attempted to modify was also modified by another transaction.
+<li>SQLCODE -20531 the version number actual-version specified in a binary XML value is not supported. the highest supported version is supported-version.
+<li>SQLCODE -22201 The DB2 Administration Server failed to authenticate the user authorization-ID on the host hostname. Reason code reason-code.
+(Verify that a valid user ID and password were specified for the host hostname.)
+<li>SQLCODE -206 Column does not exist in any table in the SELECT -or-
+<li>SQLCODE -206, warning: is not a column of an inserted table, updated table, or any table identified in a from clause
+<li>SQLCODE -208 the order by clause is invalid because column name is not part of the result table
+<li>SQLCODE -208, error: the order by clause is invalid because column is not part of the result table
+<li>SQLCODE -212 name is specified more than once in the referencing clause of a trigger definition
+<li>SQLCODE -214 an expression in the following position, or starting with position-or-expression-start in the clause-type clause is not valid. Reason code = reason-code
+<li>SQLCODE -216 You need to use the same number of expressions on both sides of the comparison. when using multiple operands in a comparison, Correct example: WHERE (E.SALARY, E.COMM) IN (SELECT S.PAY, S.COMMISSION Incorrect example: WHERE (E.SALARY, E.COMM, E.BONUS) IN (SELECT S.PAY, S.COMMISSION
+<li>SQLCODE -218, warning: the SQL statement referencing a remote object cannot be explained
+<li>SQLCODE -219 the required explanation table table-name does not exist
+<li>SQLCODE -220 the column column-name in explanation table table-name is not defined properly
+<li>SQLCODE -220, warning: the column in explanation table is not defined properly
+<li>SQLCODE -221 "set of optional columns" in explanation table table-name is incomplete. Optional column column-name is missing
+<li>SQLCODE -224 FETCH cannot make an INSENSITIVE cursor SENSITIVE
+<li>SQLCODE -225 FETCH statement for cursor-name is not valid for the declaration of the cursor
+<li>SQLCODE -227 FETCH FETCH-orientation is not allowed, because cursor cursor-name has an unknown position (<li>SQLCODE,sqlstate)
+<li>SQLCODE -228 for UPDATE clause specified for read-only cursor cursor-name
+<li>SQLCODE -229 The locale specified in a SET LOCALE statement was not found.
+<li>SQLCODE -236, warning: SQLDA includes sqlvar entries, but are required for columns
+<li>SQLCODE -237, warning: SQLDA includes sqlvar entries, but are required because at least one of the columns being described is a distinct type
+<li>SQLCODE -238, warning: SQLDA includes sqlvar entries, but sqlvar entries are needed for columns because at least one of the columns being described is a LOB
+<li>SQLCODE -239, warning: SQLDA includes sqlvar entries, but are required for columns because at least one of the columns being described is a distinct type
+<li>SQLCODE -240 the partition clause of a lock table statement is invalid
+<li>SQLCODE -242 the object named object-name of type object-type was specified more than once in the list of objects, or the name is the same as an existing object
+<li>SQLCODE -243 sensitive cursor cursor-name cannot be defined for the specified SELECT statement
+<li>SQLCODE -244 sensitivity sensitivity specified on the FETCH is not valid for cursor cursor-name
+<li>SQLCODE -245 the invocation of function routine-name is ambiguous copyright 2014 TheAmericanProgrammer.com Unauthorized copying prohibited
+<li>SQLCODE -246 statement using cursor cursor-name specified number of rows num-rows which is not valid with dimension
+<li>SQLCODE -247 a hole was detected on a multiple row FETCH statement using cursor cursor-name, but indicator variables were not provided to detect the condition
+<li>SQLCODE -248 a positioned DELETE or UPDATE statement for cursor cursor-name specified row n of a rowset, but the row is not contained within the current rowset
+<li>SQLCODE -249 definition of rowset access for cursor cursor-name is inconsistent with the FETCH orientation clause clause specified
+<li>SQLCODE -250 the local location name is not defined when processing a three-part object name
+<li>SQLCODE -250, error: the local location name is not defined when processing a three-part object name
+<li>SQLCODE -251 token name is not valid
+<li>SQLCODE -253 a non-atomic statement statement successfully completed for some of the requested rows, possibly with warnings, and one or more errors
+<li>SQLCODE -254 a non-atomic statement statement attempted to process multiple rows of data, but errors occurred
+<li>SQLCODE -270 function not supported
+<li>SQLCODE -300 the string contained in host variable or parameter position-number is not nul-terminated
+<li>SQLCODE -30000 execution failed due to a distribution protocol error that will not affect the successful execution of subsequent commands or SQL statements: reason reason-code (sub-code)
+<li>SQLCODE -30002 the SQL statement cannot be executed due to a prior condition in a chain of statements
+<li>SQLCODE -30005 execution failed because function not supported by the server: location location-name product id product-identifier reason reason-code (sub-code)
+<li>SQLCODE -30020 execution failed due to a distribution protocol error that caused deallocation of the conversation: reason reason-code (sub-code)
+<li>SQLCODE -30021 execution failed due to a distribution protocol error that will affect the successful execution of subsequent commands or SQL statements: manager manager at level level not supported error
+<li>SQLCODE -30025 execution failed because function is not supported by the server which caused termination of the connection: location location product id product-identifier reason reason-code (sub-code)
+<li>SQLCODE -30030 commit request was unsuccessful, a distribution protocol violation has been detected, the conversation has been deallocated. original SQLCODE=original-SQLCODE and original sqlstate=original-sqlstate
+<li>SQLCODE -30040 execution failed due to unavailable resources that will not affect the successful execution of subsequent commands or SQL statements. reason reason-code type of resource resource-type resource name resource-name product id product-identifier rdbname rdbname
+<li>SQLCODE -30041 execution failed due to unavailable resources that will affect the successful execution of subsequent commands and SQL statements. reason reason-code type of resource resource-type resource name resource-name product id product-identifier rdbname rdbname
+<li>SQLCODE -30050 command-or-sql-statement-type command or SQL statement invalid while bind process in progress
+<li>SQLCODE -30051 bind process with specified package name and consistency token not active
+<li>SQLCODE -30052 program preparation assumptions are incorrect
+<li>SQLCODE -30053 owner authorization failure
+<li>SQLCODE -30060 rdb authorization failure
+<li>SQLCODE -30061 rdb not found
+<li>SQLCODE -30070 command command not supported error
+<li>SQLCODE -30071 object-type object not supported error
+<li>SQLCODE -30072 parameter subcode parameter not supported error
+<li>SQLCODE -30073 parameter subcode parameter value not supported error
+<li>SQLCODE -30074 reply message with codepoint (svrcod) not supported error
+<li>SQLCODE -30080 communication error code (subcode)
+<li>SQLCODE -30081 prot communications error detected. api=api, location=loc, function=func, error codes=rc1 rc2 rc3
+<li>SQLCODE -30082 connection failed for security reason reason-code (reason-string)
+<li>SQLCODE -30090 remote operation invalid for application execution environment
+<li>SQLCODE -301 the value of input host variable or parameter number position-number cannot be used as specified because of its data type
+<li>SQLCODE -30104 error in bind option option-name and bind value option-value.
+<li>SQLCODE -30105 bind option option1 is not allowed with bind option option2 copyright 2014 TheAmericanProgrammer.com Unauthorized copying prohibited
+<li>SQLCODE -30106 invalid input data detected for a multiple row INSERT operation. INSERT processing is terminated
+<li>SQLCODE -302 the value of input variable or parameter number position-number is invalid or too large for the target column or the target value
+<li>SQLCODE -303 a value cannot be assigned to output host variable number position-number because the data types are not comparable
+<li>SQLCODE -304 a value with data type data-type1 cannot be assigned to a host variable because the value is not within the range of the host variable in position position-number with data type data-type20
+<li>SQLCODE -305 the null value cannot be assigned to output host variable number position-number because no indicator variable is specified
+<li>SQLCODE -309 a predicate is invalid because a referenced host variable has the null value
+<li>SQLCODE -310 decimal host variable or parameter number contains non-decimal data
+<li>SQLCODE -311 the length of input host variable number position-number is negative or greater than the maximum
+<li>SQLCODE -312 variable variable-name is not defined or not usable
+<li>SQLCODE -313 the number of host variables specified is not equal to the number of parameter markers
+<li>SQLCODE -314 the statement contains an ambiguous host variable reference
+<li>SQLCODE -327 the row cannot be inserted because it is outside the bound of the partition range for the last partition
+<li>SQLCODE -330 a string cannot be used because it cannot be processed. reason reason-code, character code-point, host variable position-number
+<li>SQLCODE -331 character conversion cannot be performed because a string, position position-number, cannot be converted from source-ccsid to target-ccsid, reason reason-code
+<li>SQLCODE -332 character conversion between ccsid from-ccsid to to-ccsid requested by reason-code is not supported
+<li>SQLCODE -333 the subtype of a string variable is not the same as the subtype known at bind time and the difference cannot be resolved by character conversion
+<li>SQLCODE -336 the scale of the decimal number must be zero start of
+<li>SQLCODE -338 an ON clause is invalid
+<li>SQLCODE -339, error: the SQL statement cannot be executed from an ascii based drda application requestor to a v2r2 DB2 subsystem -or-
+<li>SQLCODE -339, warning: the SQL statement has been successfully executed but there may be some character conversion inconsistencies
+<li>SQLCODE -340 the common table expression name has the same identifier as another occurrence of a common table expression definition within the same statement
+<li>SQLCODE -341 a cyclic reference exists between the common table expressions name1 and name2
+<li>SQLCODE -342 the common table expression name must not use SELECT DISTINCT and must use UNION ALL because it is recursive
+<li>SQLCODE -343 the column names are required for the recursive common table expression name
+<li>SQLCODE -344 the recursive common table expression name has mismatched data types or lengths or code page for column column-name
+<li>SQLCODE -345 the fullselect of the recursive common table expression name must be a UNION ALL and must not include aggregate functions, group by clause, having clause, or an explicit join including an on clause
+<li>SQLCODE -346 an invalid reference to common table expression name occurs in the first fullselect, as a second occurrence in the same from clause, or in the from clause of a subquery
+<li>SQLCODE -348 sequence-expression cannot be specified in this context
+<li>SQLCODE -350 column-name was implicitly or explicitly referenced in a context in which it cannot be used
+<li>SQLCODE -351 an unsupported sqltype was encountered in position position-number of the select-list
+<li>SQLCODE -352 an unsupported sqltype was encountered in position position-number of the input-list
+<li>SQLCODE -353 FETCH is not allowed, because cursor cursor-name has an unknown position
+<li>SQLCODE -354 a rowset FETCH statement may have returned one or more rows of data. however, one or more non-terminating error conditions were encountered. use the get diagnostics statement for more information regarding the conditions that were encountered
+<li>SQLCODE -355 a LOB column is too large to be logged
+<li>SQLCODE -356 key expression expression-number is not valid, reason code = reason-code
+<li>SQLCODE -359 the range of values for the identity column or sequence is exhausted
+<li>SQLCODE -363 the extended indicator variable value for parameter position-number is out of range.
+<li>SQLCODE -365 use of the value of extended indicator variable in position value-position is not valid.
+<li>SQLCODE -372 only one rowid, identity, row change timestamp, row begin, row end, transaction start id, or security label column is allowed in a table
+<li>SQLCODE -373 default cannot be specified for column or SQL variable name
+<li>SQLCODE -374 the clause clause has not been specified in the create or alter function statement for language SQL function function-name but an examination of the function body reveals that it should be specified
+<li>SQLCODE -390 the function function-name, specific name specific-name, is not valid in the context where it is used
+<li>SQLCODE -390, error: the function name , specific name , is not valid in the context in which it occurs
+<li>SQLCODE -392 SQLDA provided for cursor cursor-name has been changed from the previous FETCH (reason-code)
+<li>SQLCODE -392, error: SQLDA provided for cursor has been changed from the previous FETCH
+<li>SQLCODE -393 the condition or connection number is invalid
+<li>SQLCODE -394, warning: user specified optimization hints used during access path selection
+<li>SQLCODE -395, warning: user specified optimization hints are invalid (reason code = ''). the optimization hints are ignored
+<li>SQLCODE -396 object-type object-name attempted to execute an SQL statement during final call processing
+<li>SQLCODE -397 generated is specified as part of a column definition, but it is not valid for the definition of the column
+<li>SQLCODE -398 a locator was requested for host variable number position-number but the variable is not a LOB
+<li>SQLCODE -399 invalid value rowid was specified copyright 2014 TheAmericanProgrammer.com Unauthorized copying prohibited
+<li>SQLCODE -400 the catalog has the maximum number of user defined indexes
+<li>SQLCODE -401 the data types of the operands of an operation are not compatible
+<li>SQLCODE -402 an arithmetic function or operator function-operator is applied to character or datetime data -or-
+<li>SQLCODE -402, warning: location is unknown
+<li>SQLCODE -403, warning: the local object referenced by the create alias statement does not exist
+<li>SQLCODE -404 the SQL statement specifies a string that is too long
+<li>SQLCODE -405 the numeric constant constant cannot be used as specified because it is out of range
+<li>SQLCODE -406 a calculated or derived numeric value is not within the range of its object column
+<li>SQLCODE -407 an UPDATE, INSERT, or set value is null, but the object column column-name cannot contain null values
+<li>SQLCODE -408 the value is not compatible with the data type of its target. target name is name
+<li>SQLCODE -409 invalid operand of a count function
+<li>SQLCODE -410 a numeric value value is too long, or it has a value that is not within the range of its data type
+<li>SQLCODE -411, error: current sqlid cannot be used in a statement that references remote objects
+<li>SQLCODE -412 the SELECT clause of a subquery specifies multiple columns
+<li>SQLCODE -413 overflow or underflow occurred during numeric data type conversion
+<li>SQLCODE -414 a like predicate is invalid because the first operand is not a string
+<li>SQLCODE -415 the corresponding columns, column-number, of the operands of a set operator are not compatible
+<li>SQLCODE -416 an operand of a set operator contains a long string column
+<li>SQLCODE -417 a statement string to be prepared includes parameter markers as the operands of the same operator
+<li>SQLCODE -418 a statement string to be prepared contains an invalid use of parameter markers
+<li>SQLCODE -419 the decimal divide operation is invalid because the result would have a negative scale
+<li>SQLCODE -420 the value of a string argument was not acceptable to the function-name function
+<li>SQLCODE -421 the operands of a set operator do not have the same number of columns
+<li>SQLCODE -423 invalid value for locator in position position-#
+<li>SQLCODE -426 dynamic commit not valid at an application server where updates are not allowed
+<li>SQLCODE -427 dynamic rollback not valid at an application server where updates are not allowed
+<li>SQLCODE -430 routine-type routine-name (specific name specific-name) has abnormally terminated
+<li>SQLCODE -4302 java stored procedure or user-defined function routine-name (specific name specific-name) has exited with an exception exception-string
+<li>SQLCODE -431 routine routine-name (specific name specific-name) of type routine-type has been interrupted by the user
+<li>SQLCODE -433 value value is too long
+<li>SQLCODE -43324 Remote website copied current URL without authorization.
+<li>SQLCODE -434, warning: option is a deprecated feature
+<li>SQLCODE -435 an invalid SQLSTATE SQLSTATEis specified in a raise_error function, resignal statement, or signal statement
+<li>SQLCODE -438 application raised error with diagnostic text: text
+<li>SQLCODE -440 no authorized routine-type by the name routine-name having compatible arguments was found in the current path
+<li>SQLCODE -441 invalid use of 'distinct' or 'all' with function function-name
+<li>SQLCODE -443 routine routine-name (specific name specific-name) has returned an error SQLSTATEwith diagnostic text msg-text
+<li>SQLCODE -444 user program name could not be found
+<li>SQLCODE -445, warning: value has been truncated
+<li>SQLCODE -449 create or alter statement for function or procedure routine-name contains an invalid format of the external name clause or is missing the external name clause
+<li>SQLCODE -450 user-defined function or stored procedure name, parameter number parmnum, overlayed storage beyond its declared length.
+<li>SQLCODE -450, error: user-defined function or stored procedure , parameter number , overlayed storage beyond its declared length
+<li>SQLCODE -451 the data-item definition in the create or alter statement for routine-name contains data type type which is not supported for the type and language of the routine
+<li>SQLCODE -452 unable to access the file referenced by host variable variable-position. reason code: reason-code
+<li>SQLCODE -453 there is a problem with the returns clause in the create function statement for function-name
+<li>SQLCODE -454 the signature provided in the create function statement for function-name matches the signature of some other function already existing in the schema
+<li>SQLCODE -455 in create function for function-name, the schema name schema-name1 provided for the specific name does not match the schema name schema-name2 of the function
+<li>SQLCODE -456 in create function for function-name, the specific name specific-name already exists in the schema
+<li>SQLCODE -457 a function or distinct type cannot be called name since it is reserved for system use
+<li>SQLCODE -458 in a reference to function function-name by signature, a matching function could not be found
+<li>SQLCODE -461 a value with data type source-data-type cannot be cast to type target-data-type
+<li>SQLCODE -462, warning: external function or procedure (specific name ) has returned a warning sqlstate, with diagnostic text
+<li>SQLCODE -463, error: external function (specific name ) has returned an invalid SQLSTATE, with diagnostic text
+<li>SQLCODE -464, warning: procedure returned query result sets, which exceeds the defined limit
+<li>SQLCODE -466, warning: procedure returned query result sets
+<li>SQLCODE -469 SQL call statement must specify an output host variable for parameter number
+<li>SQLCODE -470 SQL call statement specified a null value for input parameter number, but the stored procedure does not support null values.
+<li>SQLCODE -4700 attempt to use new function before new function mode
+<li>SQLCODE -4701 the number of partitions, or the combination of the number of table space partitions and the corresponding length of the partitioning limit key exceeds the system limit; or the combination of the number of table space partitions exceeds the maxpartitions for partition by growth table space.
+<li>SQLCODE -4704 an unsupported data type was encountered as an include column
+<li>SQLCODE -4705 option specified on alter statement for routine-name (routine-type is not valid
+<li>SQLCODE -4706 alter statement for an SQL routine cannot be processed because the options currently in effect (envid current-envid) are not the same as the ones that were in effect (envid defined-envid) when the routine or version was first defined
+<li>SQLCODE -4709 explain monitored stmts failed with reason code = yyyyy
+<li>SQLCODE -471 invocation of function or procedure name failed due to reason rc
+<li>SQLCODE -4710 exchange data statement specified table1 and table2 but the tables do not have a defined clone relationship
+<li>SQLCODE -472 cursor cursor-name was left open by external function function-name (specific name specific-name)
+<li>SQLCODE -4727 system parameter system-parameter value parameter-value is inconsistent with clause clause specified on statement-name statement.
+<li>SQLCODE -473 a user defined data type cannot be called the same name as a system predefined type (built-in type)
+<li>SQLCODE -4730 invalid specification of XML column table-name.column-name is not defined in the XML versioning format, reason reason-code
+<li>SQLCODE -4731 the native SQL routine statement for package location-name.collection-id.program-name.consistency-token statement number statement-number cannot be processed.
+<li>SQLCODE -4732 the maximum number of alters allowed has been exceeded for object-type
+<li>SQLCODE -4733 the alter table statement cannot be executed because column column-name is mixed data, or the data type or length specified does not agree with the existing data type or length
+<li>SQLCODE -4734 the load module for the procedure assumes a parameter varchar option that is not consistent with the option specified on the create procedure statement for procedure-name
+<li>SQLCODE -4735 invalid table reference for table locator
+<li>SQLCODE -4736 a period specification or period clause is not supported as specified for object object-name. reason code = reason-code.
+<li>SQLCODE -4737 statement statement is not allowed when using a trusted connection
+<li>SQLCODE -4738 table table-name cannot be defined as specified in the statement statement in a common criteria environment
+<li>SQLCODE -4739 environment settings (identified by envid1) used by object-name are not the same as the ones that were in effect (identified byenvid2) when other column masks and row permissions were defined for table table-name
+<li>SQLCODE -475 the result type type-1 of the source function cannot be cast to the returns type type-2 of the user-defined function function-name
+<li>SQLCODE -475, error: the result type of the source function cannot be cast to the returns type of the user-defined function
+<li>SQLCODE -476 reference to function function-name was named without a signature, but the function is not unique within its schema
+<li>SQLCODE -478 drop or revoke on object type required-type cannot be processed because object dependent-object of type dependent-type is dependent on it
+<li>SQLCODE -480 the procedure procedure-name has not yet been called
+<li>SQLCODE -482 the procedure procedure-name returned no locators
+<li>SQLCODE -482, error: the procedure returned no locators
+<li>SQLCODE -483 in create function for function-name statement, the number of parameters does not match the number of parameters of the source function
+<li>SQLCODE -487 object-type object-name attempted to execute an SQL statement when the definition of the function or procedure did not specify this action
+<li>SQLCODE -490 number number directly specified in an SQL statement is outside the range of allowable values in this context (minval, maxval)
+<li>SQLCODE -491 create statement for user-defined function function-name must have a returns clause and: the external clause with other required keywords; the parameter names; or the source clause
+<li>SQLCODE -492 the create function for function-name has a problem with parameter number number. it may involve a mismatch with a source function
+<li>SQLCODE -494, warning: number of result sets is greater than number of locators
+<li>SQLCODE -495 estimated processor cost of estimate-amount1 processor seconds (estimate-amount2 service units) in cost category cost-category exceeds a resource limit error threshold of limit- amount service units
+<li>SQLCODE -495, warning: estimated processor cost of processor seconds ( service units) in cost category exceeds a resource limit warning threshold of service units
+<li>SQLCODE -496 the SQL statement cannot be executed because it references a result set that was not created by the current server
+<li>SQLCODE -497 the maximum limit of internal identifiers has been exceeded for database database-name
+<li>SQLCODE -499 cursor cursor-name has already been assigned to this or another result set from procedure procedure-name.
+<li>SQLCODE -500 the identified cursor was closed when the connection was destroyed
+<li>SQLCODE -5001 table table-name is not valid
+<li>SQLCODE -501 Cursor not open on FETCH [IEQ735i]
+<li>SQLCODE -5012 host variable host-variable is not exact numeric with scale zero
+<li>SQLCODE -502 Opening cursor that is already open
+<li>SQLCODE -503 Updating column which needs to be specified in FOR UPDATE OF
+<li>SQLCODE -504 cursor name cursor-name is not declared
+<li>SQLCODE -507 the cursor identified in the UPDATE or DELETE statement is not open
+<li>SQLCODE -508 the cursor identified in the UPDATE or DELETE statement is not positioned on a row or rowset that can be updated or deleted
+<li>SQLCODE -509 the table identified in the UPDATE or DELETE statement is not the same table designated by the cursor
+<li>SQLCODE -510 the table designated by the cursor of the UPDATE or DELETE statement cannot be modified
+<li>SQLCODE -511 the for UPDATE clause cannot be specified because the result table designated by the SELECT statement cannot be modified
+<li>SQLCODE -512 statement reference to remote object is invalid
+<li>SQLCODE -513 the alias alias-name must not be defined on another local or remote alias
+<li>SQLCODE -514 the cursor cursor-name is not in a prepared state
+<li>SQLCODE -516 the describe statement does not specify a prepared statement
+<li>SQLCODE -517 cursor cursor-name cannot be used because its statement name does not identify a prepared SELECT statement
+<li>SQLCODE -518 the execute statement does not identify a valid prepared statement
+<li>SQLCODE -519 the prepare statement identifies the SELECT statement of the opened cursor cursor-name
+<li>SQLCODE -525 the SQL statement cannot be executed because it was in error at bind time for section = sectno package = pkgname consistency token = contoken
+<li>SQLCODE -526 the requested operation or usage does not apply to table-type temporary table table-name
+<li>SQLCODE -530 SQLSTATE 23503 Referential integrity prevents the INSERT/UPDATE -or-
+<li>SQLCODE -530 the INSERT or UPDATE value of foreign key constraint-name is invalid
+<li>SQLCODE -531 parent key in a parent row cannot be updated because it has one or more dependent rows in relationship constraint-name
+<li>SQLCODE -532 SQLSTATE 23504 Referential integrity (DELETE RESTRICT rule) prevents the DELETE -or-
+<li>SQLCODE -532 the relationship constraint-name restricts the deletion of row with rid x rid-number
+<li>SQLCODE -533 invalid multiple-row INSERT
+<li>SQLCODE -534 the primary key cannot be updated because of multiple-row UPDATE
+<li>SQLCODE -535, warning: the result of the positioned UPDATE or DELETE may depend on the order of the rows
+<li>SQLCODE -536 SQLSTATE 42914 Referential integrity (DELETE RESTRICT rule) prevents the DELETE
+<li>SQLCODE -537 the primary key, foreign key, unique, or partitioning key clause identifies column column-name more than once
+<li>SQLCODE -538 foreign key name does not conform to the description of a parent key of table table-name
+<li>SQLCODE -539 table table-name does not have a primary key
+<li>SQLCODE -540 the definition of table table-name is incomplete because it lacks a primary index or a required unique index
+<li>SQLCODE -541, warning: the referential or unique constraint has been ignored because it is a duplicate
+<li>SQLCODE -542 column-name cannot be a column of a hash key, primary key, a unique constraint, or a parent key because it can contain null values
+<li>SQLCODE -543 a row in a parent table cannot be deleted because the check constraint check-constraint restricts the deletion
+<li>SQLCODE -544 the check constraint specified in the alter table statement cannot be added because an existing row violates the check constraint
+<li>SQLCODE -545 SQLSTATE 23513 Check constraint prevents the INSERT/UPDATE
+<li>SQLCODE -546 the check constraint constraint-name is invalid
+<li>SQLCODE -548 a check constraint that is defined with column-name is invalid
+<li>SQLCODE -549 the statement statement is not allowed for object_type1 object_name because the bind option dynamicrules(run) is not in effect for object_type
+<li>SQLCODE -551 auth-id does not have the privilege to perform operation operation on object object-name
+<li>SQLCODE -552 authorization-id does not have the privilege to perform operation operation
+<li>SQLCODE -553 auth-id specified is not one of the valid authorization ids for requested operation
+<li>SQLCODE -553, error: specified is not one of the valid authorization ids
+<li>SQLCODE -554 an authorization id or role cannot grant a privilege to itself
+<li>SQLCODE -555 an authorization id or role cannot revoke a privilege from itself
+<li>SQLCODE -556 revoke-target cannot have the privilege privilege object-name revoked by revoker-id because the revokee does not possess the privilege or the revoker did not make the grant
+<li>SQLCODE -557 inconsistent grant/revoke keyword keyword. permitted keywords are keyword-list
+<li>SQLCODE -558, error: invalid clause or combination of clauses on a grant or revoke
+<li>SQLCODE -559 all authorization functions have been disabled
+<li>SQLCODE -561, warning: the alter, index, references, and trigger privileges cannot be granted to public at all locations
+<li>SQLCODE -562 the specified privileges cannot be granted to public.
+<li>SQLCODE -567 bind-type authorization error using auth-id authority package = package-name privilege = privilege
+<li>SQLCODE -571 the statement would result in a multiple site UPDATE
+<li>SQLCODE -573 table table-name does not have a unique key with the specified column names
+<li>SQLCODE -574 the specified default value or identity attribute value conflicts with the definition of column column-name
+<li>SQLCODE -575 object object-name (object type object-type) cannot be referenced explicitly or implicitly
+<li>SQLCODE -577 object-type object-name attempted to modify data when the definition of the function or procedure did not specify this action
+<li>SQLCODE -578 the return statement was not executed for SQL function function-name.
+<li>SQLCODE -579, error: attempted to read data when the definition of the function or procedure did not specify this action
+<li>SQLCODE -580 the result-expressions of a case expression cannot all be null
+<li>SQLCODE -581 the data types of the result-expressions of a case expression are not compatible
+<li>SQLCODE -582 the search-condition in a searched-when-clause of a case is not valid in the context in which it was specified. the search condition contains a quantified predicate or an in predicate that includes a fullselect, and these are not allowed in the specified context.
+<li>SQLCODE -583 the use of function or expression name is invalid because it is not deterministic or has an external action
+<li>SQLCODE -584 invalid use of null Updated Sept 2013 The American Programmer unique ID IEQ735i
+<li>SQLCODE -585 the collection collection-id appears more than once in the set special-register statement
+<li>SQLCODE -586 the total length of the current path special register cannot exceed 2048 characters
+<li>SQLCODE -589 a positioned DELETE or UPDATE statement for cursor cursor-name specified a row of a rowset, but the cursor is not positioned on a rowset
+<li>SQLCODE -590 name name is not unique in the create or alter for routine routine-name
+<li>SQLCODE -592 not authorized to create functions or procedures in wlm environment env-name
+<li>SQLCODE -593 not null must be specified for column-name because it is defined as a rowid (or distinct type for rowid), row change timestamp column, row begin column, row end column, or column of a period column-name
+<li>SQLCODE -594 attempt to create a nullable rowid or distinct type column column-name
+<li>SQLCODE -599, warning: comparison functions are not created for a distinct type based on a long string data type
+<li>SQLCODE -601 the name (version or volume serial number) of the object to be defined or the target of a rename statement is identical to the existing name (version or volume serial number) object-name of the object type object-type
+<li>SQLCODE -602 too many columns, periods, or key-expressions specified in a create index or alter index statement
+<li>SQLCODE -603 a unique index cannot be created because the table contains rows which are duplicates with respect to the values of the identified columns and periods
+<li>SQLCODE -604 a data type definition specifies an invalid length, precision, or scale attribute
+<li>SQLCODE -607 operation or option operation is not defined for this object
+<li>SQLCODE -610, warning: a create/alter on object has placed object in pending
+<li>SQLCODE -611 only lockmax 0 can be specified when the lock size of the tablespace is tablespace or table
+<li>SQLCODE -612 identifier is a duplicate name
+<li>SQLCODE -613 the primary key or a hash key or a unique constraint is too long or has too many columns and periods
+<li>SQLCODE -614 the index cannot be created or altered, or the length of a column cannot be changed because the sum of the internal lengths of the columns for the index is greater than the allowable maximum
+<li>SQLCODE -615 operation-type is not allowed on a package in use
+<li>SQLCODE -616 obj-type1 obj-name1 cannot be dropped because it is referenced by obj-type2 obj-name2
+<li>SQLCODE -617, error: a type 1 index is not valid for table
+<li>SQLCODE -618 operation operation is not allowed on system databases
+<li>SQLCODE -619 operation disallowed because the database is not stopped
+<li>SQLCODE -620 keyword keyword in stmt-type statement is not permitted for a space-type space in the database-type database
+<li>SQLCODE -621 duplicate dbid dbid was detected and previously assigned to database-name
+<li>SQLCODE -622 for mixed data is invalid because the mixed data install option is no
+<li>SQLCODE -623 cluster is not valid for table-name
+<li>SQLCODE -624 table table-name already has a primary key or unique constraint with specified columns and periods
+<li>SQLCODE -625 table table-name does not have an index to enforce the uniqueness of the primary or unique key
+<li>SQLCODE -625, warning: the definition of table has been changed to incomplete
+<li>SQLCODE -626 the alter statement is not executable because the page set is not stopped
+<li>SQLCODE -627 the alter statement is invalid because the table space or index has user-managed data sets
+<li>SQLCODE -628 the clauses are mutually exclusive
+<li>SQLCODE -629 set null cannot be specified because foreign key name cannot contain null values
+<li>SQLCODE -630, error: the WHERE NOT NULL specification is invalid for type 1 indexes
+<li>SQLCODE -631 foreign key name is too long or has too many columns
+<li>SQLCODE -632 the table cannot be defined as a dependent of table-name because of DELETE rule restrictions
+<li>SQLCODE -633 the DELETE rule must be DELETE-rule
+<li>SQLCODE -634 the DELETE rule must not be cascade
+<li>SQLCODE -635 the DELETE rules cannot be different or cannot be set null
+<li>SQLCODE -636 ranges specified for partition part-num are not valid
+<li>SQLCODE -637 duplicate keyword-name keyword or clause
+<li>SQLCODE -638 table table-name cannot be created because column definition is missing
+<li>SQLCODE -639 a nullable column of a foreign key with a DELETE rule of set null cannot be a column of the key of a partitioned index
+<li>SQLCODE -640 locksize row cannot be specified because table in this tablespace has type 1 index
+<li>SQLCODE -642, error: too many columns in unique constraints
+<li>SQLCODE -643 a check constraint or the value of an expression for a column of an index exceeds the maximum allowable length key expression
+<li>SQLCODE -644 invalid value specified for keyword or clause keyword-or-clause in statement stmt-type
+<li>SQLCODE -645, warning: WHERE NOT NULL is ignored because the index key cannot contain null values
+<li>SQLCODE -646 table table-name cannot be created in specified table space table-space-name because it already contains a table
+<li>SQLCODE -647 bufferpool bp-name for implicit or explicit tablespace or indexspace name has not been activated
+<li>SQLCODE -650 the alter statement cannot be executed, reason reason-code copyright 2014 TheAmericanProgrammer.com Unauthorized copying prohibited
+<li>SQLCODE -651 table description exceeds maximum size of object descriptor.
+<li>SQLCODE -652 violation of installation defined edit or validation procedure proc-name
+<li>SQLCODE -653 table table-name in partitioned table space tspace-name is not available because its partitioned index has not been created
+<li>SQLCODE -655 the create or alter stogroup is invalid because the storage group would have both specific and non-specific volume ids
+<li>SQLCODE -658 a object-type cannot be dropped using the statement statement
+<li>SQLCODE -660 index index-name cannot be created or altered on partitioned table space tspace-name because key limits are not specified
+<li>SQLCODE -661 object-type object-name cannot be created on partitioned table space tspace-name because the number of partition specifications is not equal to the number of partitions of the table space
+<li>SQLCODE -662 a partitioned index cannot be created on a table space, or a table space cannot be index-controlled. table space tspace-name, reason reason-code
+<li>SQLCODE -663 the number of key limit values is either zero, or greater than the number of columns in the key of index index-name
+<li>SQLCODE -664, warning: the internal length of the limit-key fields for the partitioned index exceeds the length imposed by the index manager
+<li>SQLCODE -665 the partition clause of an alter statement is omitted or invalid
+<li>SQLCODE -666 stmt-verb object cannot be executed because function is in progress
+<li>SQLCODE -667 the clustering index for a partitioned table space cannot be explicitly dropped
+<li>SQLCODE -668 the column cannot be added to the table because the table has an edit procedure defined with row attribute sensitivity
+<li>SQLCODE -669 the object cannot be explicitly dropped. reason reason-code
+<li>SQLCODE -670 the record length of the table exceeds the page size limit
+<li>SQLCODE -671 the bufferpool attribute of the table space cannot be altered as specified because it would change the page size of the table space
+<li>SQLCODE -672 operation drop not allowed on table table_name
+<li>SQLCODE -676 the physical characteristics of the index are incompatible with respect to the specified statement. the statement has failed. reason reason-code
+<li>SQLCODE -677 insufficient virtual storage for bufferpool expansion
+<li>SQLCODE -678 the constant constant specified for the index limit key must conform to the data type data-type of the corresponding column column-name
+<li>SQLCODE -679 the object name cannot be created because a drop is pending on the object
+<li>SQLCODE -680 too many columns specified for a table, view or table function
+<li>SQLCODE -681 column column-name in violation of installation defined field procedure. rt: return-code, rs: reason-code, msg: message-token
+<li>SQLCODE -682 field procedure procedure-name could not be loaded
+<li>SQLCODE -683 the specification for column, distinct type, function, or procedure data-item contains incompatible clauses
+<li>SQLCODE -684 the length of constant list beginning string is too long
+<li>SQLCODE -685 invalid field type, column-name
+<li>SQLCODE -686 column defined with a field procedure can not compare with another column with different field procedure
+<li>SQLCODE -687 field types incomparable
+<li>SQLCODE -688 incorrect data returned from field procedure, column-name, msgno
+<li>SQLCODE -689 too many columns defined for a dependent table
+<li>SQLCODE -690 the statement is rejected by data definition control support. reason reason-code
+<li>SQLCODE -691 the required registration table table-name does not exist
+<li>SQLCODE -692 the required unique index index-name for ddl registration table table-name does not exist
+<li>SQLCODE -693 the column column-name in ddl registration table or index name is not defined properly
+<li>SQLCODE -694 the schema statement cannot be executed because a drop is pending on the ddl registration table table-name
+<li>SQLCODE -694, error: the ddl statement cannot be executed because a drop is pending on the ddl registration table
+<li>SQLCODE -695 invalid value seclabel specified for security label column of table table-name
+<li>SQLCODE -696 the definition of trigger trigger-name includes an invalid use of correlation name or transition table name name. reason code=reason-code
+<li>SQLCODE -697 old or new correlation names are not allowed in a trigger defined with the for each statement clause. old_table or new_table names are not allowed in a trigger with the before clause.
+<li>SQLCODE -7008 object-name not valid for operation (reason-code)
+<li>SQLCODE -713 the replacement value for special-register is invalid
+<li>SQLCODE -715 program program-name with mark release-dependency-mark failed because it depends on functions of the release from which fallback has occurred
+<li>SQLCODE -716 program program-name precompiled with incorrect level for this release
+<li>SQLCODE -717 bind-type for object-type object-name with mark release-dependency-mark failed because object-type depends on functions of the release from which fallback has occurred
+<li>SQLCODE -718 rebind of package package-name failed because ibmreqd of ibmreqd is invalid
+<li>SQLCODE -719 bind add error using auth-id authority package package-name already exists
+<li>SQLCODE -720 bind error, attempting to replace package = package_name with version= version2 but this version already exists
+<li>SQLCODE -721 bind error for package = pkg-id contoken = contoken'x is not unique so it cannot be created
+<li>SQLCODE -722 bind-type error using auth-id authority package package-name does not exist
+<li>SQLCODE -723 an error occurred in a triggered SQL statement in trigger-name. information returned: <li>SQLCODE: sql-code, sqlstate: sql-state, message tokens token-list, section number section-number
+<li>SQLCODE -723, error: an error occurred in a triggered SQL statement in trigger , section number .information returned: <li>SQLCODE , SQLSTATE, and message tokens
+<li>SQLCODE -724 the activation of the object-type object object-name would exceed the maximum level of indirect SQL cascading
+<li>SQLCODE -725 the special register register at location location was supplied an invalid value
+<li>SQLCODE -726 bind error attempting to replace package = package-name. there are enable or disable entries currently associated with the package
+<li>SQLCODE -728, error: data type is not allowed in DB2 private protocol processing
+<li>SQLCODE -729 a stored procedure specifying commit on return cannot be the target of a nested call statement
+<li>SQLCODE -730 the parent of a table in a read-only shared database must also be a table in a read-only shared database
+<li>SQLCODE -731 user-defined dataset dsname must be defined with shareoptions(1,3)
+<li>SQLCODE -732 the database is defined on this subsystem with the roshare read attribute but the table space or index space has not been defined on the owning subsystem
+<li>SQLCODE -733 the description of a table space, index space, or table in a roshare read database must be consistent with its description in the owner system
+<li>SQLCODE -734 the roshare attribute of a database cannot be altered from roshare read
+<li>SQLCODE -735 database dbid cannot be accessed because it is no longer a shared database
+<li>SQLCODE -736 invalid obid obid specified
+<li>SQLCODE -737 implicit table space not allowed
+<li>SQLCODE -738, warning: definition change of may require similar change on read-only systems
+<li>SQLCODE -739 create or alter function function-name failed because functions cannot modify data when they are processed in parallel.
+<li>SQLCODE -740 function name is defined with the option modifies SQL data which is not valid in the context in which it was invoked
+<li>SQLCODE -741 a database-type database is already defined for member member-name
+<li>SQLCODE -742 dsndb07 is the implicit work file database
+<li>SQLCODE -746 the SQL statement in function, trigger, or in stored procedure name violates the nesting SQL restriction
+<li>SQLCODE -747 table table-name is not available until the auxiliary tables and indexes for its externally stored columns have been created
+<li>SQLCODE -748 an index index-name already exists on auxiliary table table-name
+<li>SQLCODE -750 the source table table-name cannot be renamed or altered because it is referenced in an existing view, materialized query table, trigger definition, or is a clone table, or has a clone table defined for it.
+<li>SQLCODE -751 object-type object-name (specific name specific name) attempted to execute an SQL statement SQL-statement that is not allowed
+<li>SQLCODE -752 the connect statement is invalid because the process is not in the connectable state
+<li>SQLCODE -763 invalid table space name space-name
+<li>SQLCODE -764 a LOB table space and its associated base table space must be in the same database
+<li>SQLCODE -765 table is not compatible with database
+<li>SQLCODE -766 the object of a statement is a table for which the requested operation is not permitted
+<li>SQLCODE -767 missing or invalid column specification for index index-name
+<li>SQLCODE -768 an auxiliary table already exists for the specified column or partition
+<li>SQLCODE -769 specification of create aux table does not match the characteristics of the base table
+<li>SQLCODE -770 table table-name cannot have a LOB column unless it also has a rowid, or an XML column unless it also has a docid column
+<li>SQLCODE -771 invalid specification of a rowid column
+<li>SQLCODE -773 case not found for case statement
+<li>SQLCODE -775 statement specified in SQL routine is not allowed within a compound statement.
+<li>SQLCODE -776 use of cursor cursor-name is not valid
+<li>SQLCODE -778 ending label label-name does not match the beginning label
+<li>SQLCODE -779 label label specified on a goto, iterate, or leave statement is not valid
+<li>SQLCODE -780 undo specified for a handler
+<li>SQLCODE -781 condition condition-name is not defined or the definition is not in scope
+<li>SQLCODE -782 a condition or SQLSTATEcondition-value specified is not valid
+<li>SQLCODE -783 SELECT list for cursor cursor-name in for statement is not valid. column column-name is not unique
+<li>SQLCODE -784 constraint constraint-name cannot be dropped.
+<li>SQLCODE -785 use of SQLCODE or SQLSTATEis not valid
+<li>SQLCODE -787 resignal statement issued outside of a handler
+<li>SQLCODE -797 the trigger trigger-name is defined with an unsupported triggered SQL statement
+<li>SQLCODE -798 a value cannot be specified for column column-name which is defined as generated always
+<li>SQLCODE -799, warning: a set statement references a special register that does not exist at the server site
+<li>SQLCODE -802 exception error exception-type has occurred during operation-type operation on data-type data, position position-number
+<li>SQLCODE -803 an inserted or updated value is invalid because the index in index space indexspace-name constrains columns of the table so no two rows can contain duplicate values in those columns. rid of existing row is x record-id -or-
+<li>SQLCODE -803 SQLSTATE 23505 Duplicate key on INSERT or UPDATE. (Duplicate record in DB2)
+<li>SQLCODE -803, error: an inserted or updated value is invalid because index in index space constrains columns of the table so no two rows can contain duplicate values in those columns. RID of existing row is x''
+<li>SQLCODE -804 an error was found in the application program input parameters for the SQL statement, reason reason
+<li>SQLCODE -805 dlim or package name location-name.collection-id.dlim-name.consistency-token not found in plan plan-name. reason reason-code -or-
+<li>SQLCODE -805 DliM or package not found in plan Is plan name correct?
+<li>SQLCODE -806, warning: bind isolation level rr conflicts with tablespace locksize page or locksize row and lockmax 0
+<li>SQLCODE -807 access denied: package package-name is not enabled for access from connection-type connection-name
+<li>SQLCODE -808 the connect statement is not consistent with the first connect statement
+<li>SQLCODE -811 More than one row retrieved in SELECT INTO -or-
+<li>SQLCODE -811 the result of an embedded SELECT statement or a subselect in the set clause of an UPDATE statement is a table of more than one row, or the result of a subquery of a basic predicate is more than one value
+<li>SQLCODE -812 the SQL statement cannot be processed because a blank collection-id was found in the current packageset special register while trying to form a qualified package name for program program-name.consistency-token using plan plan-name
+<li>SQLCODE -815, error: a group by or having clause is implicitly or explicitly specified in a subselect of a basic predicate or a set clause of an UPDATE statement
+<li>SQLCODE -817 the SQL statement cannot be executed because the statement will result in a prohibited UPDATE operation.
+<li>SQLCODE -818 Plan and program: timestamp mismatch
+<li>SQLCODE -819 the view cannot be processed because the length of its parse tree in the catalog is zero
+<li>SQLCODE -820 the SQL statement cannot be processed because catalog-table contains a value that is not valid in this release
+<li>SQLCODE -822 the SQLDA contains an invalid data address or indicator variable address
+<li>SQLCODE -840 too many items returned in a SELECT or INSERT list
+<li>SQLCODE -842 a connection to location-name already exists
+<li>SQLCODE -843 the set connection or release statement must specify an existing connection
+<li>SQLCODE -845 a previous value expression cannot be used before the next value expression generates a value in the current application process for sequence sequence-name
+<li>SQLCODE -846 invalid specification of an identity column or sequence object object-type object-name. reason code = reason-code
+<li>SQLCODE -863, warning: the connection was successful but only sbcs will be supported
+<li>SQLCODE -867 invalid specification of a rowid column copyright 2014 TheAmericanProgrammer.com Unauthorized copying prohibited
+<li>SQLCODE -870 the number of host variables in the statement is not equal to the number of descriptors
+<li>SQLCODE -872 a valid ccsid has not yet been specified for this subsystem
+<li>SQLCODE -873 the statement referenced data encoded with different encoding schemes or ccsids in an invalid context
+<li>SQLCODE -874 the encoding scheme specified for the object-type must be the same as the containing table space or other parameters
+<li>SQLCODE -875 operand cannot be used with the ascii data referenced
+<li>SQLCODE -876 object-type cannot be created or altered, reason reason-text
+<li>SQLCODE -877 ccsid ascii or ccsid unicode is not allowed for this database or table space
+<li>SQLCODE -878 the explain-object used for explain must be encoded in unicode. it cannot be in ascii or ebcdic.
+<li>SQLCODE -879 create or alter statement for obj-name cannot define a column, distinct type, function or stored procedure parameter as mixed or graphic with encoding scheme encoding-scheme
+<li>SQLCODE -880 savepoint savepoint-name does not exist or is invalid in this context
+<li>SQLCODE -881 a savepoint with name savepoint-name already exists, but this savepoint name cannot be reused
+<li>SQLCODE -882 savepoint does not exist
+<li>SQLCODE -883, warning: rollback to savepoint occurred when there were operations that cannot be undone or an operation that cannot be undone occurred when there was a savepoint outstanding
+<li>SQLCODE -900 the SQL statement cannot be executed because the application process is not connected to a server
+<li>SQLCODE -900, error: the SQL statement cannot be executed because the application process is not connected to an application server
+<li>SQLCODE -901 unsuccessful execution caused by a system error that does not preclude the successful execution of subsequent SQL statements
+<li>SQLCODE -901, error: unsuccessful execution caused by a system error that does not preclude the successful execution of subsequent SQL statements
+<li>SQLCODE -902 pointer to the essential control block (ct/rda) has value 0, rebind required
+<li>SQLCODE -902, error: pointer to essential control block(rda/ct) has value 0, rebind required
+<li>SQLCODE -904 SQLSTATE 57011 Unavailable resource. Someone is locking the data you need you may choose to terminate the program -or-
+<li>SQLCODE -904 unsuccessful execution caused by an unavailable resource. reason reason-code, type of resource resource-type, and resource name resource-name
+<li>SQLCODE -905 unsuccessful execution due to resource limit being exceeded, resource name = resource-name limit = limit-amount1 cpu seconds (limit-amount2 service units) derived from limit-source
+<li>SQLCODE -906 the SQL statement cannot be executed because this function is disabled due to a prior error
+<li>SQLCODE -908 bind-type error using auth-id authority. bind, rebind or auto-rebind operation is not allowed
+<li>SQLCODE -909 the object has been deleted or altered
+<li>SQLCODE -910 the SQL statement cannot access an object on which uncommitted changes are pending
+<li>SQLCODE -911 SQLSTATE 40000 Deadlock or timeout. Rollback has been done. -or-
+<li>SQLCODE -911 the current unit of work has been rolled back due to deadlock or timeout. reason reason-code, type of resource resource-type, and resource name resource-name
+<li>SQLCODE -913 SQLSTATE 40502 Your program was the victim of a deadlock or timeout. NO rollback has been done.You should do a ROLLBACK.
+<li>SQLCODE -917 bind package failed
+<li>SQLCODE -918 the SQL statement cannot be executed because a connection has been lost
+<li>SQLCODE -919 a rollback operation is required
+<li>SQLCODE -922 authorization failure: error-type error. reason reason-code
+<li>SQLCODE -922, error: authorization failure: error. reason
+<li>SQLCODE -923 connection not established: DB2 condition reason reason-code, type resource-type, name resource-name
+<li>SQLCODE -924 DB2 connection internal error, function-code, return-code, reason-code
+<li>SQLCODE -925 commit not valid in ims, cics or rrsaf environment
+<li>SQLCODE -925, error: commit not valid in ims or cics environment
+<li>SQLCODE -926 rollback not valid in ims, cics or rrsaf environment
+<li>SQLCODE -927 the language interface (li) was called when the connecting environment was not established. the program should be invoked under the dsn command
+<li>SQLCODE -929 failure in a data capture exit: token
+<li>SQLCODE -939 rollback required due to unrequested rollback of a remote server
+<li>SQLCODE -947 the SQL statement failed because it will change a table defined with data capture changes, but the data cannot be propagated
+<li>SQLCODE -948 distributed operation is invalid. Updated Sept 2013 The American Programmer unique ID IEQ735i copyright 2014 TheAmericanProgrammer.com Unauthorized copying prohibited
+<li>SQLCODE -950 the location name specified in the connect statement is invalid or not listed in the communications database
+<li>SQLCODE -951 object object-name object type object-type is in use and cannot be the target of the specified alter statement
+<li>SQLCODE -952 processing was interrupted by a cancel request from a client program
+<li>SQLCODE -952854 Website copied current URL without authorization.
+<li>SQLCODE -981 the SQL statement failed because the rrsaf connection is not in a state that allows SQL operations, reason reason-code.
+<li>SQLCODE -989 after trigger trigger-name attempted to modify a row in table table-name that was modified by an SQL data change statement within a from clause
+<li>SQLCODE -991 call attach was unable to establish an implicit connect or open to DB2. rc1= rc1 rc2= rc2
+<li>SQLCODE -992 package package-name cannot be executed or deployed on location location-name</li>
+
+</body>
+</html>

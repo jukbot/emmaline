@@ -1,0 +1,12 @@
+input[type = "text"]
+{
+width:300px;
+}
+.modal-header .close {
+margin-top: -8px;
+}
+
+.pagination > .active > a, .pagination > .active > a:focus, .pagination > .active > a:hover, .pagination > .active > span, .pagination > .active > span:focus, .pagination > .active > span:hover {
+    background-color: #5BC0DE;
+    border-color: #46B8DA;
+}
