@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Emmaline Zoo</title>
+		<meta name="description" content="I don't know" />
+		<meta name="author" content="SIT KMUTT" />
+		<link rel="shortcut icon" href="img/ico/icon.png">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/project.css" />
+  	<script src="js/modernizr.custom.js"></script>
+	</head>
+	<body>
+
+		<div class="container">
+
+			<header>
+				<h1 style="text-align:center; font-size: 5rem;">EMMALINE ZOO</h1>
+				<p style="text-align:center; font-size: 2rem; font-weight: 300;">"Inspire and assist in the conservation of the natural world is our job."</p>
+			</header>
+			<section class="grid">
+				<div class="grid__column grid__column--pink" id="trigger-overlay">
+					<h1>About Project</h1>
+				</div>
+				<a href="//emmalinezoo.com/" class="grid__column grid__column--blue">
+					<h1>Visit Zoo</h1>
+				</a>
+				<a href="./app/login.php" class="grid__column grid__column--green">
+					<h1>For Developer</h1>
+        </a>
+			</section>
+		</div><!-- /container -->
+
+
+		<!-- open/close -->
+		<div class="overlay overlay-hugeinc">
+			<button type="button" class="overlay-close" id="close-btn">Close</button>
+			<div style="padding: 22% 0;">
+			<p style="
+	text-align: center; 
+	font-size: 1.75rem; 
+	font-weight: 300;
+	color: #FFF; 
+	margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);">We provide engaging experiences with animals and create and share knowledge to save wildlife and habitats.</p>
+	</div>
+		</div>
+		<script src="js/classie.js"></script> <!-- for fucking old ie browser user -->
+		<script src="js/expand.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script>
+
+$(document).ready(function() {
+
+    $('#trigger-overlay').click(
+	function () {
+        $('#trigger-overlay').hide();
+    });
+
+    $('#close-btn').click(function () {
+        $('#trigger-overlay').show();
+    });
+});
+
+// Google Analysis Script
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-51514677-4', 'auto');
+  ga('send', 'pageview');
+  
+		</script>
+		
+	</body>
+</html>

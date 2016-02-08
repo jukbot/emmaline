@@ -1,0 +1,1082 @@
+/* ==================================================
+   CSS Imports
+================================================== */
+
+@import url("reset.css");
+@import url("gridsystem.css");
+@import url("newsletter.css");
+@import url("owl.carousel.css");
+
+/* ==================================================
+   Icon Fonts
+================================================== */
+
+@import url("../fonts/fontawesome/font-awesome.css");
+
+/* ==================================================
+   Google English Fonts
+================================================== */
+
+@import url("//fonts.googleapis.com/css?family=Dosis:300,500,700");
+@import url("//fonts.googleapis.com/css?family=Noto+Sans:400,700");
+
+/* ==================================================
+   Thai Fonts
+================================================== */
+
+@font-face {
+    font-family: 'thaisans_neuebold';
+    src: url('../fonts/thaisansneue/thaisansneue-bold-webfont.eot');
+    src: url('../fonts/thaisansneue/thaisansneue-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/thaisansneue/thaisansneue-bold-webfont.woff2') format('woff2'),
+         url('../fonts/thaisansneue/thaisansneue-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'thaisans_neueitalic';
+    src: url('../fonts/thaisansneue/thaisansneue-italic-webfont.eot');
+    src: url('../fonts/thaisansneue/thaisansneue-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/thaisansneue/thaisansneue-italic-webfont.woff2') format('woff2'),
+         url('../fonts/thaisansneue/thaisansneue-italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'thaisans_neuelight';
+    src: url('../fonts/thaisansneue/thaisansneue-light-webfont.eot');
+    src: url('../fonts/thaisansneue/thaisansneue-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/thaisansneue/thaisansneue-light-webfont.woff2') format('woff2'),
+         url('../fonts/thaisansneue/thaisansneue-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'thaisans_neueregular';
+    src: url('../fonts/thaisansneue/thaisansneue-regular-webfont.eot');
+    src: url('../fonts/thaisansneue/thaisansneue-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/thaisansneue/thaisansneue-regular-webfont.woff2') format('woff2'),
+         url('../fonts/thaisansneue/thaisansneue-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* ==================================================
+   Global Styles
+================================================== */
+
+*, *:after, *:before
+{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html
+{
+	height: 100%;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+
+body
+{
+	font-family: "Alegreya Sans", Arial, Verdana, Helvetica, sans-serif;
+	font-size: 17px;
+	line-height: 28px;
+	color: #444;
+	color: rgba(0,0,0,0.7);
+	background: #FFF;
+	
+	text-rendering: optimizeLegibility;
+	vertical-align: baseline;
+}
+
+::selection
+{
+	background: #e74c3c;
+	color: #FFF;
+}
+
+::-moz-selection
+{
+	background: #e74c3c;
+	color: #FFF;
+}
+
+a
+{
+	color: #e74c3c;
+	text-decoration: none;
+}
+
+	a:hover
+	{
+		color: #333;
+	}
+
+
+/* ==================================================
+   Menu
+================================================== */
+
+#menucont #menu #mobiletitle
+{
+	display: none;
+}
+
+/** Top level **/
+
+#menucont #menu *
+{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+	#menucont #menu ul#fullmenucont
+	{
+		float: right;
+	}
+	
+		#menucont #menu ul#fullmenucont li
+		{
+			position: relative;
+			float: left;
+			list-style-type: none;
+		}
+
+			#menucont #menu ul#fullmenucont a
+			{
+				float: left;
+				line-height: 46px;
+				padding: 0 12px;
+				letter-spacing: 1px;
+				text-transform: uppercase;
+				color: #444;
+			}
+			
+			#menucont #menu ul#fullmenucont li.active a,
+			#menucont #menu ul#fullmenucont a:hover,
+			#menucont #menu ul#fullmenucont li:hover > a
+			{
+				color: #e74c3c;
+			}
+			
+				#menucont #menu ul#fullmenucont a span
+				{
+					padding: 0 0 0 10px;
+					color: #e74c3c;
+				}
+
+/** Second level **/
+
+#menucont #menu ul#fullmenucont ul
+{
+	position: absolute;
+	margin: 0;
+	padding: 20px 0 0 0;
+	visibility: hidden;
+	top: 43px;
+	left: 0;
+	z-index: 999;
+	opacity: 0;
+	
+    -webkit-transition: visibility 0s ease-out 0.2s, opacity 0.2s ease-out, top 0.2s ease-out;
+    -moz-transition: visibility 0s ease-out 0.2s, opacity 0.2s ease-out, top 0.2s ease-out;
+    -o-transition: visibility 0s ease-out 0.2s, opacity 0.2s ease-out, top 0.2s ease-out;
+    transition: visibility 0s ease-out 0.2s, opacity 0.2s ease-out, top 0.2s ease-out;
+}
+
+	#menucont #menu ul#fullmenucont li:not(:hover).hasChild ul
+	{
+		visibility: hidden;
+		top: 43px;
+	}
+
+	#menucont #menu ul#fullmenucont li:hover.hasChild ul
+	{
+		visibility: visible;
+		top: 40px;
+		opacity: 1;
+
+		-webkit-transition-delay: 0s;
+		transition-delay: 0s;
+	}
+
+		#menucont #menu ul#fullmenucont ul a
+		{
+			position: relative;
+			padding: 10px 12px;
+			width: 240px;
+			height: auto;
+			line-height: 18px;
+			background: #e74c3c;
+			color: #FFF;
+			font-size: 86%;
+		}
+		
+			#menucont #menu ul#fullmenucont ul a:hover,
+			#menucont #menu ul#fullmenucont ul li:hover > a
+			{
+				background: #c0392b;
+				color: #FFF;
+			}
+			
+	/** CSS Arrow **/
+	
+	#menucont #menu ul#fullmenucont ul li:first-child a:after
+	{
+		bottom: 100%;
+		left: 60px;
+		border: solid transparent;
+		content: " ";
+		height: 0;
+		width: 0;
+		position: absolute;
+		pointer-events: none;
+		border-color: rgba(26,188,156,0);
+		border-bottom-color: #e74c3c;
+		border-width: 12px;
+		margin-left: -12px;
+	}
+
+/** Responsive Menu **/
+
+.mean-container .mean-bar
+{
+	position: relative;
+	float: left;
+	width: 100%;
+}
+
+.mean-container a.meanmenu-reveal
+{
+	position: absolute;
+	display: block;
+	top: -31px;
+	right: 0;
+	width: auto;
+	cursor: pointer;
+}
+
+	.mean-container a.meanmenu-reveal span
+	{
+		clear: both;
+		float: left;
+		display: block;
+		font-size: 24px;
+		color: #e74c3c;
+	}
+
+.mean-container .mean-nav
+{
+	float: left;
+	width: 100%;
+}
+
+	.mean-container .mean-nav ul
+	{
+		width: 100%;
+		margin: 0;
+	}
+	
+	.mean-container .mean-nav > ul
+	{
+		float: left;
+		width: 100%;
+		margin: 0 0 15px 0;
+	}
+	
+		.mean-container .mean-nav ul li
+		{
+			position: relative;
+			float: left;
+			display: block;
+			width: 100%;
+			font-weight: 400;
+			list-style-type: none;
+		}
+		
+			.mean-container .mean-nav > ul > li:first-child
+			{
+				padding-top: 20px;
+			}
+		
+				.mean-container .mean-nav ul li a
+				{
+					float: left;
+					width: 100%;
+					padding: 2px 15px 2px 0;
+					text-transform: uppercase;
+					color: #444;
+				}
+				
+					.mean-container .mean-nav ul ul li a
+					{
+						padding: 0 0 0 10px;
+					}
+							
+					.mean-container .mean-nav a span
+					{
+						display: none;
+					}
+		
+					.mean-container .mean-nav ul li a:hover
+					{
+						color: #e74c3c;
+					}
+
+.mean-container .mean-nav ul li a.mean-expand,
+.mean-expand mean-clicked
+{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: auto;
+	border: none !important;
+	padding: 2px 0 !important;
+	font-size: 22px !important;
+	font-family: inherit;
+	text-align: center;
+	z-index: 2;
+	font-weight: 400;
+	color: #e74c3c;
+}
+
+	.mean-container .mean-nav ul > li:hover > a.mean-expand
+	{
+		color: #333;
+	}
+
+
+
+
+/* ==================================================
+   Images
+================================================== */
+
+img
+{
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+}
+
+
+/* ==================================================
+   Separator Arrows
+================================================== */
+
+.arrow-separator
+{
+	position: relative;
+}
+
+	.arrow-separator:after
+	{
+		top: 100%;
+		border: solid transparent;
+		content: " ";
+		height: 0;
+		width: 0;
+		position: absolute;
+		pointer-events: none;
+		border-width: 18px;
+		left: 50%;
+		margin-left: -18px;
+		z-index: 11;
+	}
+	
+		.arrow-red:after
+		{
+			border-color: #e74c3c rgba(231,76,60,0) rgba(231,76,60,0) rgba(231,76,60,0); /** Using RGB to remove dark line in Firefox **/
+		}
+
+/* ==================================================
+   Backgrounds
+================================================== */
+
+.bg
+{
+	background: no-repeat bottom center;
+	background-size: cover;
+	height: 580px;
+	z-index: -1;
+}
+
+.bg2
+{
+	background: #EEE;
+}
+
+.bg3
+{
+	background: #FFF;
+	border-top: 5px solid #e74c3c;
+}
+
+/* ==================================================
+   Layout Styles
+================================================== */
+
+.container
+{
+	width: 100%;
+	padding: 0 30px;
+	min-width: 300px;
+}
+
+	.container .bodycontainer
+	{
+		margin: 0 auto;
+		width: 100%;
+		max-width: 1140px;
+	}
+	
+/* ==================================================
+   Sections
+================================================== */
+
+[data-sr]
+{
+	visibility: hidden;
+}
+
+.section
+{
+	padding: 80px 0;
+	text-align: center;
+}
+
+#headercont
+{
+	position: relative;
+	padding: 18px 0;
+	text-align: left;
+}
+
+	#headercont #logocont p
+	{
+		margin: 10px 0 0 0;
+	}
+
+		#headercont #logocont p a
+		{
+			font-size: 27px;
+			line-height: 27px;
+			font-weight: 400;
+			color: #444;
+			letter-spacing: 1.5px;
+			text-transform: uppercase;
+			font-family: "Dosis";
+		}
+		
+		#headercont #logocont p a:hover
+		{
+			color: #e74c3c;
+		}
+		
+	#headercont #menucont
+	{
+		font-family: "Dosis";
+	}
+
+#middlecont
+{
+	padding: 200px 0;
+	position: absolute;
+	width: 100%;
+	z-index:1;
+}
+
+	#middlecont h3
+	{
+		font-size: 50px;
+		line-height: 50px;
+		font-weight: 400;
+		text-transform: uppercase;
+		color: #FFF;
+		font-family: "Dosis";
+		letter-spacing: 2px;
+		margin: 0;
+	}
+
+	#middlecont .th3
+	{
+	font-size: 3.5rem;
+	line-height: 3.2rem;
+	color: #FFF;
+	margin: 30px 10px;
+	letter-spacing: 1px;
+	font-family: "thaisans_neuelight";
+	}
+
+	#middlecont #clock
+	{
+		padding: 0;
+		width: 100%;
+		max-width: 700px;
+		margin: 0 auto;
+	}
+	
+		#middlecont #clock div
+		{
+			float: left;
+			width: 25%;
+			text-align: center;
+			font-size: 64px;
+			line-height: 64px;
+			font-weight: 600;
+			padding: 15px 0;
+			text-transform: uppercase;
+			color: #FFF;
+			font-family: "Noto Sans";
+			letter-spacing: -1px;
+		}
+		
+			#middlecont #clock div span
+			{
+				display: block;
+				color: #FFF;
+				color: rgba(255,255,255,0.6);
+				font-size: 16px;
+				line-height: 16px;
+				font-weight: 300;
+				margin: 10px 0 0 0;
+				font-family: "thaisans_neueregular";
+				letter-spacing: 3px;
+			}
+			
+	.subscribe_head
+	{
+		font-size: 2.5rem;
+		line-height: 2.2rem;
+		color: #444;
+		margin: 0 0 30px 0;
+		letter-spacing: 1px;
+		font-family: "thaisans_neueregular";
+	}
+
+	.subscribe_describe
+	{
+		font-size: 1.75rem;
+		line-height: 1.8rem;
+		color: #444;
+		margin: 0 0 30px 0;
+		letter-spacing: 1px;
+		font-family: "thaisans_neuelight";
+	}
+	
+		#newslettercont h3 span
+		{
+			color: #e74c3c;
+		}
+	
+	#newslettercont p
+	{
+		margin: 0 0 30px 0;
+	}
+		
+
+	#ourteamcont h3
+	{
+		font-size: 22px;
+		line-height: 22px;
+		font-weight: 500;
+		color: #444;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+		margin: 5px 0 10px 0;
+		font-family: "Dosis";
+	}
+	
+	#ourteamcont p
+	{
+		font-size: 15px;
+		line-height: 22px;
+	}
+
+	#ourteamcont .box
+	{
+		padding: 20px 0;
+	}
+
+	#ourteamcont .dwdgrid-4
+	{
+		text-align: right;
+	}
+	
+	#ourteamcont .dwdgrid-8 p:last-child
+	{
+		margin: 0;
+	}
+
+	#ourteamcont .withbg
+	{
+		background: url("../img/bg.png") repeat-y 33.33% 0;
+	}
+	
+	#ourteamcont .owl-customnav
+	{
+		margin: 0 0 20px 0;
+	}
+	
+		#ourteamcont .owl-customnav ul
+		{
+			float: right;
+		}
+	
+			#ourteamcont .owl-customnav ul li
+			{
+				float: left;
+			}
+			
+				#ourteamcont .owl-customnav ul li a
+				{
+					display: inline-block;
+					font-size: 21px;
+					line-height: 31px;
+					width: 100%;
+					text-align: center;
+					width: 28px;
+					background: #e74c3c;
+					color: #FFF;
+					cursor: pointer;
+					margin: 10px 0 0 5px;
+				}
+				
+					#ourteamcont .owl-customnav ul li a:hover
+					{
+						background: #c0392b;
+					}
+					
+	#ourteamcont .owl-carousel .item
+	{
+		position: relative;
+		text-align: center;
+	}
+	
+		#ourteamcont .owl-carousel .item p img
+		{
+			display: inline-block;
+			width: 100%;
+			max-width: 120px;
+			
+			-webkit-border-radius: 80px;
+			-moz-border-radius: 80px;
+			border-radius: 80px;
+		}
+		
+		#ourteamcont .owl-carousel .item h3
+		{
+			font-size: 20px;
+			line-height: 20px;
+			font-weight: 500;
+			color: #444;
+			letter-spacing: 1px;
+			text-transform: uppercase;
+			margin: 10px 0;
+			font-family: "Dosis";
+		}
+		
+		#ourteamcont .owl-carousel .item p
+		{
+			font-size: 15px;
+			line-height: 22px;
+			padding: 0;
+		}
+
+	#servicescont .row
+	{
+		padding: 0 0 40px 0;
+	}
+	
+	#servicescont .row:last-child
+	{
+		padding: 0;
+	}
+	
+		#servicescont span
+		{
+			margin: 0 0 15px 0;
+			font-size: 20px;
+			color: #e74c3c;
+			font-size: 36px;
+		}
+	
+		#servicescont h3
+		{
+			font-size: 22px;
+			line-height: 22px;
+			font-weight: 500;
+			color: #444;
+			letter-spacing: 1px;
+			text-transform: uppercase;
+			margin: 5px 0 10px 0;
+			font-family: "Dosis";
+		}
+					
+		#servicescont p
+		{
+			font-size: 15px;
+			line-height: 22px;
+		}
+
+#testimonialcont
+{
+	text-align: left;
+}
+
+	#testimonialcont h3
+	{
+		font-size: 22px;
+		line-height: 22px;
+		font-weight: 500;
+		color: #444;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+		margin: 5px 0 10px 0;
+		font-family: "Dosis";
+	}
+	
+	#testimonialcont p
+	{
+		font-size: 15px;
+		line-height: 22px;
+	}
+	
+		#testimonialcont .item p
+		{
+			font-size: 17px;
+			line-height: 28px;
+			font-style: italic;
+		}
+
+	#testimonialcont .box
+	{
+		padding: 20px 0;
+	}
+
+	#testimonialcont .dwdgrid-4
+	{
+		text-align: right;
+	}
+	
+	#testimonialcont .dwdgrid-8 p:last-child
+	{
+		margin: 0;
+		color: #000;
+		color: rgba(0,0,0,0.4);
+	}
+
+	#testimonialcont .withbg
+	{
+		background: url("../img/bg.png") repeat-y 33.33% 0;
+	}
+	
+	#testimonialcont .owl-customnav
+	{
+		margin: 0 0 20px 0;
+	}
+	
+		#testimonialcont .owl-customnav ul
+		{
+			float: right;
+		}
+	
+			#testimonialcont .owl-customnav ul li
+			{
+				float: left;
+			}
+			
+				#testimonialcont .owl-customnav ul li a
+				{
+					display: inline-block;
+					font-size: 21px;
+					line-height: 31px;
+					width: 100%;
+					text-align: center;
+					width: 28px;
+					background: #e74c3c;
+					color: #FFF;
+					cursor: pointer;
+					margin: 10px 0 0 5px;
+				}
+				
+					#testimonialcont .owl-customnav ul li a:hover
+					{
+						background: #c0392b;
+					}
+					
+#footercont
+{
+	padding: 40px 0;
+	color: #999;
+	font-size: 90%;
+	font-style: italic;
+	color: rgba(0, 0, 0, 0.5);
+	text-align: left;
+}
+
+	#footercont .column-10
+	{
+		text-align: right;
+	}
+
+	#footercont p
+	{
+		margin: 0;
+	}
+
+	#footercont a
+	{
+		color: rgba(0,0,0,0.4);
+	}
+	
+	#footercont a:hover
+	{
+		color: #e74c3c;
+	}
+	
+		#footercont a.scrolltop
+		{
+			font-size: 38px;
+		}
+	
+		#footercont #socialmedia ul
+		{
+			margin: 0 0 20px 0;
+		}
+
+		#footercont #socialmedia ul li
+		{
+			display: inline-block;
+			list-style-type: none;
+			margin: 0 12px 0 0;
+			padding: 0;
+		}
+
+			#footercont #socialmedia ul li a
+			{
+				font-size: 27px;
+			}
+
+/* ==================================================
+   Media Queries - Full HD Desktop - Landscape
+================================================== */
+
+@media only screen and (min-width: 1900px)
+{
+.bg {
+    height: 720px;
+}	
+#middlecont {
+    padding: 250px 0;
+}
+.section {
+    padding: 60px 0;
+}	
+.subscribe_head {
+    font-size: 2.5rem;
+    line-height: 2.2rem;
+    color: #444;
+    margin: 0 0 20px 0;
+}
+}
+
+
+
+/* ==================================================
+   Media Queries - Tablet - Landscape
+================================================== */
+
+@media only screen and (max-width: 1048px)
+{
+	
+	
+	
+}
+
+/* ==================================================
+   Media Queries - Mobile - Landscape
+================================================== */
+
+@media only screen and (max-width: 960px)
+{
+	
+	#middlecont
+	{
+		padding: 80px 0;
+	}
+		
+		#middlecont #clock
+		{
+			padding: 0;
+		}
+		
+			#middlecont #clock div
+			{
+				font-size: 46px;
+				line-height: 46px;
+				padding: 20px 0;
+			}
+			
+	#servicescont
+	{
+		padding: 40px 0 30px 0;
+	}
+	
+		#servicescont .row
+		{
+			padding: 0;
+		}
+		
+		#servicescont .row .box
+		{
+			padding: 0 0 30px 0;
+			text-align: center;
+		}
+
+			#servicescont h3 span
+			{
+				display: inline-block;
+				width: 100%;
+				max-width: 100%;
+				padding: 0;
+				font-size: 30px;
+				margin: 0 0 10px 0;
+				text-align: center;
+			}
+	
+	#ourteamcont .dwdgrid-4
+	{
+		text-align: center;
+	}
+
+		#ourteamcont .withbg
+		{
+			background-image: none;
+		}
+		
+		#ourteamcont .box
+		{
+			padding: 0 0 20px 0;
+		}
+		
+		#ourteamcont .owl-customnav
+		{
+			margin: 0 0 20px 0;
+		}
+		
+			#ourteamcont .owl-customnav ul
+			{
+				float: none;
+				display: inline-block;
+			}
+	
+				#ourteamcont .owl-customnav ul li a
+				{
+					display: inline-block;
+					margin: 10px 5px 0 5px;
+				}
+
+	#testimonialcont .dwdgrid-4
+	{
+		text-align: center;
+	}
+
+		#testimonialcont .withbg
+		{
+			background-image: none;
+		}
+		
+		#testimonialcont .box
+		{
+			padding: 0 0 20px 0;
+		}
+		
+		#testimonialcont p
+		{
+			text-align: center;
+		}
+		
+		#testimonialcont .owl-customnav
+		{
+			margin: 0 0 20px 0;
+		}
+		
+			#testimonialcont .owl-customnav ul
+			{
+				float: none;
+				display: inline-block;
+			}
+	
+				#testimonialcont .owl-customnav ul li a
+				{
+					display: inline-block;
+					margin: 10px 5px 0 5px;
+				}
+
+	#footercont
+	{
+		text-align: center;
+	}
+	
+		#footercont .column-10
+		{
+			text-align: center;
+			margin-top: 20px;
+		}
+	
+		#footercont a.scrolltop
+		{
+			display: block;
+			margin: 0;
+		}
+		
+		#footercont #socialmedia ul li
+		{
+			margin: 0 10px 0 0;
+		}
+	
+}
+
+/* ==================================================
+   Media Queries - Mobile - Small Landscape
+================================================== */
+
+@media only screen and (max-width: 768px)
+{
+	
+	#middlecont #clock div
+	{
+		width: 50%;
+	}
+	
+}
+
+/* ==================================================
+   Media Queries - Mobile - Portrait
+================================================== */
+
+@media only screen and (max-width: 480px)
+{
+	
+	
+	
+}
+

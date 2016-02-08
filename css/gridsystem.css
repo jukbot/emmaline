@@ -1,0 +1,118 @@
+/* ==================================================
+   Custom Grid Styles
+================================================== */
+
+.row
+{
+	width: 100%;
+	
+	width: -moz-calc(100% + 40px);
+	width: -webkit-calc(100% + 40px);
+	width: -o-calc(100% + 40px);
+	width: calc(100% + 40px);
+	
+	margin: 0 -20px;
+}
+
+	.row .box
+	{
+		padding: 0;
+		margin: 0;
+	}
+	
+.withbg
+{
+	background: url("../images/bg.png") repeat-y 50% 0;
+}
+	
+/* ==================================================
+   Grid System
+================================================== */
+
+[class*='dwdgrid-']
+{
+	position: relative;
+	float: left;
+	width: 100%;
+	padding: 0 20px;
+}
+
+.dwdgrid-1
+{ width: 8.3333333333333%; }
+
+.dwdgrid-2
+{ width: 16.666666666667%; }
+
+.dwdgrid-3
+{ width: 25%; }
+
+.dwdgrid-4
+{ width: 33.333333333333%; }
+
+.dwdgrid-5
+{ width: 41.666666666667%; }
+
+.dwdgrid-6
+{ width: 50%; }
+
+.dwdgrid-7
+{ width: 58.333333333333%; }
+
+.dwdgrid-8
+{ width: 66.666666666667%; }
+
+.dwdgrid-9
+{ width: 75%; }
+
+.dwdgrid-10
+{ width: 83.333333333333%; }
+
+.dwdgrid-11
+{ width: 91.666666666667%; }
+
+.dwdgrid-12
+{ width: 100%; }
+
+/* ==================================================
+   Media Queries - Mobile - Landscape
+================================================== */
+
+@media only screen and (max-width: 960px)
+{
+	
+	[class*='dwdgrid-']
+	{
+		width: 100%;
+	}
+
+	[class*='dwdgrid-']:last-of-type
+	{
+		float: right;
+	}
+
+	.withbg
+	{
+		background-image: none;
+	}
+	
+}
+
+/**
+
+<div class="row withbg clearfix">
+	<div class="dwdgrid-6">
+		<div class="box">
+			<h3>Half Width</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget diam dictum, posuere velit eu, condimentum orci. Sed eget sapien dictum arcu venenatis dignissim. Cras vitae est facilisis tortor vestibulum mollis. Vivamus tempor malesuada dolor, vitae tempus dolor.</p>
+		</div>
+	</div>
+	<div class="dwdgrid-6">
+		<div class="box">
+			<h3>Half Width</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget diam dictum, posuere velit eu, condimentum orci. Sed eget sapien dictum arcu venenatis dignissim. Cras vitae est facilisis tortor vestibulum mollis. Vivamus tempor malesuada dolor, vitae tempus dolor.</p>
+		</div>
+	</div>
+</div>
+
+**/
+
